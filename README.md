@@ -1,64 +1,76 @@
-# Project Portfolio
+# Front-End Projects
 
-Welcome to my project portfolio! This document provides an overview of my three web development projects: a **YouTube Clone**, a **Twitter Clone**, and a **Personal Website Portfolio**.
+Welcome to my front-end projects repository! This repository showcases my work on various web applications created using HTML and CSS, without the use of JavaScript or Bootstrap.
 
-## Table of Contents
+## Projects
 
-- [YouTube Clone](#youtube-clone)
-- [Twitter Clone](#twitter-clone)
-- [Personal Website Portfolio](#personal-website-portfolio)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Screenshots](#screenshots)
+### 1. YouTube Clone
 
----
+![YouTube Clone](link-to-image-or-screenshot)
 
-## YouTube Clone
+**Description:**
+A simple clone of the YouTube interface where users can browse videos, search for content, and view video details. The layout mimics the original YouTube design, focusing on responsive design principles.
 
-A web application that replicates the core functionalities of YouTube, allowing users to watch and upload videos.
+**Features:**
+- Responsive layout
+- Video thumbnails with hover effects
+- Navigation bar similar to YouTube
 
-### Features
-- Video upload and playback
-- User authentication
-- Comments and likes
-
----
-
-## Twitter Clone
-
-A social media platform that mimics Twitter's core functionalities, enabling users to post tweets, follow others, and engage with content.
-
-### Features
-- User registration and login
-- Posting tweets
-- Following and unfollowing users
-
----
-
-## Personal Website Portfolio
-
-A personal portfolio website showcasing my skills, projects, and experiences.
-
-### Features
-- Project showcase
-- About me section
-- Contact form
-
----
-
-## Technologies Used
-
+**Technologies Used:**
 - HTML
 - CSS
-- JavaScript (for interactivity)
-- Responsive design frameworks (e.g., Bootstrap)
+
+**Demo:**
+[Live Demo](link-to-live-demo)
 
 ---
 
-## Installation
+### 2. Twitter Clone
 
-To view the projects locally:
+![Twitter Clone](link-to-image-or-screenshot)
+
+**Description:**
+A basic replica of Twitter’s user interface that allows users to view tweets, profiles, and trends. This project emphasizes the structure of Twitter’s layout and styles.
+
+**Features:**
+- User profile section
+- Tweet feed
+- Responsive design
+
+**Technologies Used:**
+- HTML
+- CSS
+
+**Demo:**
+[Live Demo](link-to-live-demo)
+
+---
+
+### 3. Personal Website Portfolio
+
+![Personal Website Portfolio](link-to-image-or-screenshot)
+
+**Description:**
+A personal portfolio website that showcases my projects, skills, and contact information. The design is clean and simple, making it easy to navigate.
+
+**Features:**
+- Project showcase
+- About me section
+- Contact form (static)
+
+**Technologies Used:**
+- HTML
+- CSS
+
+**Demo:**
+[Live Demo](link-to-live-demo)
+
+---
+
+## Getting Started
+
+To view these projects locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repository.git
+   git clone https://github.com/AS2812/Front-end.git
