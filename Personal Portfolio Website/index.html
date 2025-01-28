@@ -3,42 +3,48 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Ahmed Shacker Helmi</title>
+    <meta name="description" content="Ahmed Shacker Helmi's Portfolio - Cybersecurity & Front-End Development">
+    <meta name="keywords" content="Cybersecurity, Front-End Development, Data Science, Java, Python, R, HTML, CSS, JavaScript">
+    <meta name="author" content="Ahmed Shacker Helmi">
+    <title>Ahmed Shacker Helmi - Cybersecurity & Front-End Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
     <!-- Header -->
     <header>
-        <a href="#" class="logo">Ahmed</a>
-        <nav class="navigation">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <a href="#" class="logo" aria-label="Home">Ahmed</a>
+        <nav class="navigation" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <!-- Main Section -->
-    <section class="main">
+    <section class="main" aria-labelledby="main-heading">
         <div>
-            <h2>Hello, I'm Ahmed Shacker Helmi<br>
+            <h1 id="main-heading">Hello, I'm Ahmed Shacker Helmi<br>
                 <span>Cybersecurity & Front-End Development</span>
-            </h2>
-            <h3>Volunteer at IEEE | Francophone | Cybersecurity Student at Alexandria University</h3>
-            <a href="#projects" class="main-btn">View my work</a>
+            </h1>
+            <h2>Volunteer at IEEE | Francophone | Cybersecurity Student at Alexandria University</h2>
+            <a href="#projects" class="main-btn" aria-label="View my work">View my work</a>
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/ahmed-shacker-helmi-44a3762a4/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/AS2812" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/__shacker__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ahmed-shacker-helmi-44a3762a4/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/AS2812" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/__shacker__/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="cards">
-        <h2 class="title">About</h2>
+    <section id="about" class="cards" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="title">About</h2>
         <div class="content">
             <div class="card">
                 <div class="info">
@@ -63,14 +69,14 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="cards">
-        <h2 class="title">Experience</h2>
+    <section id="experience" class="cards" aria-labelledby="experience-heading">
+        <h2 id="experience-heading" class="title">Experience</h2>
         <div class="content">
 
             <!-- DEPI -->
             <div class="card">
                 <div class="icon">
-                    <i class="fa-solid fa-briefcase"></i>
+                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>Intern, Digital Egypt Pioneers Initiative - DEPI</h3>
@@ -85,7 +91,7 @@
             <!-- ITI -->
             <div class="card">
                 <div class="icon">
-                    <i class="fa-solid fa-laptop-code"></i>
+                    <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>Internship Trainee, Information Technology Institute (ITI)</h3>
@@ -99,7 +105,7 @@
             <!-- Offense Crest -->
             <div class="card">
                 <div class="icon">
-                    <i class="fa-solid fa-user-secret"></i>
+                    <i class="fa-solid fa-user-secret" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>Intern, Offense Crest</h3>
@@ -116,12 +122,12 @@
     </section>
 
     <!-- Services Section (optional) -->
-    <section class="cards" id="services">
-        <h2 class="title">Services</h2>
+    <section class="cards" id="services" aria-labelledby="services-heading">
+        <h2 id="services-heading" class="title">Services</h2>
         <div class="content">
             <div class="card">
                 <div class="icon">
-                    <i class="fa-brands fa-java"></i>
+                    <i class="fa-brands fa-java" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>Java Coding</h3>
@@ -130,7 +136,7 @@
             </div>
             <div class="card">
                 <div class="icon">
-                    <i class="fa-brands fa-python"></i>
+                    <i class="fa-brands fa-python" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>Python Coding</h3>
@@ -139,7 +145,7 @@
             </div>
             <div class="card">
                 <div class="icon">
-                    <i class="fa-solid fa-r"></i>
+                    <i class="fa-solid fa-r" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>Data Visualization in R</h3>
@@ -148,7 +154,7 @@
             </div>
             <div class="card">
                 <div class="icon">
-                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>HTML Coding</h3>
@@ -157,7 +163,7 @@
             </div>
             <div class="card">
                 <div class="icon">
-                    <i class="fa-brands fa-css3-alt"></i>
+                    <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>CSS Styling</h3>
@@ -166,7 +172,7 @@
             </div>
             <div class="card">
                 <div class="icon">
-                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-js" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>JavaScript Functionality</h3>
@@ -175,7 +181,7 @@
             </div>
             <div class="card">
                 <div class="icon">
-                    <i class="fa-solid fa-chart-simple"></i>
+                    <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>Performance Optimization</h3>
@@ -186,8 +192,8 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <h2 class="title">Projects</h2>
+    <section class="projects" id="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading" class="title">Projects</h2>
         <div class="content">
             <div class="project-card">
                 <div class="project-image">
@@ -199,7 +205,7 @@
                     </p>
                     <strong class="project-title">
                         <span>Java Projects</span>
-                        <a href="https://github.com/AS2812/java-projects" class="more-details">More details</a>
+                        <a href="https://github.com/AS2812/java-projects" class="more-details" aria-label="More details about Java Projects">More details</a>
                     </strong>
                 </div>
             </div>
@@ -213,7 +219,7 @@
                     </p>
                     <strong class="project-title">
                         <span>Python Projects</span>
-                        <a href="https://github.com/AS2812/python_projects" class="more-details">More details</a>
+                        <a href="https://github.com/AS2812/python_projects" class="more-details" aria-label="More details about Python Projects">More details</a>
                     </strong>
                 </div>
             </div>
@@ -227,7 +233,7 @@
                     </p>
                     <strong class="project-title">
                         <span>Data Visualizations</span>
-                        <a href="https://github.com/AS2812/data_science" class="more-details">More details</a>
+                        <a href="https://github.com/AS2812/data_science" class="more-details" aria-label="More details about Data Science Projects">More details</a>
                     </strong>
                 </div>
             </div>
@@ -241,7 +247,7 @@
                     </p>
                     <strong class="project-title">
                         <span>Data Structure Projects</span>
-                        <a href="https://github.com/AS2812/java-projects/tree/java/data-structure-projects" class="more-details">More details</a>
+                        <a href="https://github.com/AS2812/java-projects/tree/java/data-structure-projects" class="more-details" aria-label="More details about Data Structure Projects">More details</a>
                     </strong>
                 </div>
             </div>
@@ -255,7 +261,7 @@
                     </p>
                     <strong class="project-title">
                         <span>Malware Development Projects</span>
-                        <a href="https://github.com/AS2812/-MalwareDevelopmentToolkit" class="more-details">More details</a>
+                        <a href="https://github.com/AS2812/-MalwareDevelopmentToolkit" class="more-details" aria-label="More details about Malware Development Projects">More details</a>
                     </strong>
                 </div>
             </div>
@@ -263,12 +269,12 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="cards contact" id="contact">
-        <h2 class="title">Let's work together</h2>
+    <section class="cards contact" id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="title">Let's work together</h2>
         <div class="content">
             <div class="card">
                 <div class="icon">
-                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>Phone</h3>
@@ -277,7 +283,7 @@
             </div>
             <div class="card">
                 <div class="icon">
-                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
                 </div>
                 <div class="info">
                     <h3>Email</h3>
@@ -293,9 +299,9 @@
             <span>Ahmed Shacker</span>
         </p>
         <div class="social-icons">
-            <a href="https://www.linkedin.com/in/ahmed-shacker-helmi-44a3762a4/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/AS2812" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/__shacker__/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ahmed-shacker-helmi-44a3762a4/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/AS2812" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/__shacker__/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
 
