@@ -1,309 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Ahmed Shacker Helmi's Portfolio - Cybersecurity & Front-End Development">
-    <meta name="keywords" content="Cybersecurity, Front-End Development, Data Science, Java, Python, R, HTML, CSS, JavaScript">
-    <meta name="author" content="Ahmed Shacker Helmi">
-    <title>Ahmed Shacker Helmi - Cybersecurity & Front-End Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Shacker Helmi - Portfolio</title>
+    <style>
+        <style>
+    :root {
+        --primary-color: #FF8B00;    /* Fanta Orange */
+        --secondary-color: #E0E0E0;  /* Light Gray */
+        --background-color: #0D0D0D; /* Fanta Black */
+        --card-background: #1A1A1A;  /* Dark Gray */
+        --text-color: #FFFFFF;       
+        --nav-background: rgba(13, 13, 13, 0.95);
+        --border-color: rgba(255,255,255,0.1);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: var(--nav-background);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    nav a:hover {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 80px auto 0;
+        padding: 20px;
+    }
+
+    header {
+        background-color: var(--card-background);
+        padding: 40px 0;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+    }
+
+    .profile-header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        border: 3px solid var(--primary-color);
+    }
+
+    .profile-info h1 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    .section {
+        background-color: var(--card-background);
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        border: 1px solid var(--border-color);
+        transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+        transform: translateY(-5px);
+    }
+
+    .section h2 {
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    .experience-item, .project-item, .certification-item {
+        margin-bottom: 25px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .skill-tag {
+        background-color: rgba(255,139,0,0.15);
+        color: var(--primary-color);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        border: 1px solid var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+    }
+
+    .skills-category {
+        margin-bottom: 25px;
+    }
+
+    .skills-category h3 {
+        color: var(--text-color);
+        margin-bottom: 15px;
+        font-size: 1.1em;
+    }
+
+    .certification-issuer, .experience-date {
+        color: var(--secondary-color);
+        font-size: 0.9em;
+        opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            flex-wrap: wrap;
+        }
+        
+        .profile-header {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .container {
+            padding: 10px;
+        }
+    }
+</style>
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <a href="#" class="logo" aria-label="Home">Ahmed</a>
-        <nav class="navigation" aria-label="Main Navigation">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <div class="nav-container">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#volunteering">Volunteering</a>
         </nav>
+    </div>
+    <header>
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-image"></div>
+                <div class="profile-info">
+                    <h1>Ahmed Shacker Helmi</h1>
+                    <p>Cybersecurity Student at Alexandria University | Data Analyst Specialist Trainee</p>
+                    <p>Alexandria, Egypt</p>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Main Section -->
-    <section class="main" aria-labelledby="main-heading">
-        <div>
-            <h1 id="main-heading">Hello, I'm Ahmed Shacker Helmi<br>
-                <span>Cybersecurity & Front-End Development</span>
-            </h1>
-            <h2>Volunteer at IEEE | Francophone | Cybersecurity Student at Alexandria University</h2>
-            <a href="#projects" class="main-btn" aria-label="View my work">View my work</a>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/ahmed-shacker-helmi-44a3762a4/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/AS2812" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/__shacker__/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-        </div>
-    </section>
+    <main class="container">
+        <section class="section" id="about">
+            <h2>About</h2>
+            <p>I am a Computer Science student at Alexandria University, specializing in Cybersecurity. My expertise spans both offensive and defensive security, with hands-on experience in ethical hacking, network security, and cryptography.</p>
+    
+            <p>I have completed certifications from TryHackMe, Google Cybersecurity, and the SOC roadmap, and am actively pursuing the Google Cybersecurity Professional Certificate on Coursera. My skills include vulnerability assessment, penetration testing, and threat analysis, which I’ve developed through real-world projects and internships.</p>
+    
+            <p>In addition to cybersecurity, I have strong data analysis capabilities using Python, SQL, Tableau, and have earned certifications from SAS and CIB. I also have experience in full-stack development, currently enhancing my skills through HackerRank to better support my freelance work in both cybersecurity and web development.</p>
+    
+            <p>My internship experiences at Offense Crest, ITI, and ITIDA have allowed me to apply my knowledge in real-world scenarios, solving complex security challenges. I'm constantly learning and adapting to new technologies to stay on the cutting edge of cybersecurity.</p>
+    
+            <p>I’m actively seeking freelance opportunities to leverage my expertise in cybersecurity and full-stack development.</p>
+        </section>
+    </main>
+    
 
-    <!-- About Section -->
-    <section id="about" class="cards" aria-labelledby="about-heading">
-        <h2 id="about-heading" class="title">About</h2>
-        <div class="content">
-            <div class="card">
-                <div class="info">
-                    <p>
-                        I am a passionate Computer Science student specializing in 
-                        Cybersecurity at Alexandria University, focusing on both 
-                        offensive and defensive security. Currently in my second 
-                        year, I have internships in cybersecurity, front-end 
-                        development, and data analytics.
-                    </p>
-                    <p>
-                        I have enhanced my skills with certifications in cloud 
-                        security, data literacy, and digital transformation while 
-                        volunteering with organizations like IEEE. My projects 
-                        range from malware development to data science in R, and 
-                        I love creativity—piano, choir, design, and video editing. 
-                        Always open to new opportunities!
-                    </p>
-                </div>
+        <section class="section" id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <h3 class="experience-title">Data Analyst Specialist Trainee</h3>
+                <div class="experience-company">Digital Egypt Pioneers Initiative - DEPI</div>
+                <div class="experience-date">Sep 2024 - Present · Alexandria, Egypt · Hybrid</div>
+                <p>Analyzing large datasets using Python, SQL, and Tableau. Collaborating with teams to identify trends, improve data models, and enhance customer satisfaction through data-driven insights.</p>
             </div>
-        </div>
-    </section>
+        
+            <div class="experience-item">
+                <h3 class="experience-title">Internship Trainee</h3>
+                <div class="experience-company">Information Technology Institute (ITI)</div>
+                <div class="experience-date">Sep 2024 - Oct 2024 · Alexandria, Egypt · Remote</div>
+                <p>Completed comprehensive training in web development fundamentals including Scratch, CSS, HTML, and CS50. Developed interactive projects and gained strong problem-solving skills.</p>
+            </div>
+        
+            <div class="experience-item">
+                <h3 class="experience-title">Intern</h3>
+                <div class="experience-company">Offense Crest</div>
+                <div class="experience-date">Aug 2024 - Oct 2024 · Alexandria, Egypt · Hybrid</div>
+                <p>Specialized in Cybersecurity, C/C++, Assembly, and networking. Implemented AES encryption in Assembly on Linux and gained expertise in system-level programming.</p>
+            </div>
+        
+            <div class="experience-item">
+                <h3 class="experience-title">Internship Trainee</h3>
+                <div class="experience-company">Information Technology Industry Development Agency (ITIDA)</div>
+                <div class="experience-date">Sep 2024 · Alexandria, Egypt · On-site</div>
+                <p>Developed skills in innovation, entrepreneurship, and creative problem-solving. Completed certifications focused on technology leadership and collaboration.</p>
+            </div>
+        
+            <div class="experience-item">
+                <h3 class="experience-title">Internship Trainee</h3>
+                <div class="experience-company">CIB Egypt</div>
+                <div class="experience-date">Aug 2024 - Sep 2024 · Alexandria, Egypt · Remote</div>
+                <p>Focused on Data Literacy and Digital Transformation. Completed CIB Summer Bootcamp on leadership and earned certifications in business technology integration.</p>
+            </div>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="cards" aria-labelledby="experience-heading">
-        <h2 id="experience-heading" class="title">Experience</h2>
-        <div class="content">
+        <section class="section" id="projects">
+            <h2>Projects</h2>
+            
+            <div class="project-item">
+                <h3>Comprehensive Retail Analytics</h3>
+                <div class="experience-date">Dec 2024</div>
+                <p>Performed in-depth exploratory data analysis on retail sales data, identifying key trends in product categories, regional performance, and customer segmentation. Used Python and Jupyter for data visualization and statistical analysis.</p>
+                <div class="skills-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Data Analysis</span>
+                    <span class="skill-tag">Jupyter</span>
+                    <span class="skill-tag">Data Visualization</span>
+                </div>
+            </div>
+        
+            <div class="project-item">
+                <h3>RansomSafe: AES Encryption Tool</h3>
+                <div class="experience-date">Oct 2024 - Nov 2024</div>
+                <p>Developed a ransomware simulation project combining Assembly, C, and Python for secure file handling. Implemented AES encryption using OpenSSL and created a Python GUI for demonstration purposes.</p>
+                <div class="skills-list">
+                    <span class="skill-tag">Assembly</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">AES</span>
+                    <span class="skill-tag">GUI</span>
+                </div>
+            </div>
+        
+            <div class="project-item">
+                <h3>Customer Data Analysis</h3>
+                <div class="experience-date">Sep 2024</div>
+                <p>Created a Shiny application for customer behavior analysis featuring data visualization, k-means clustering, and association rule mining. Implemented CSV file handling and interactive visualizations.</p>
+                <div class="skills-list">
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">Data Mining</span>
+                    <span class="skill-tag">Clustering</span>
+                    <span class="skill-tag">Visualization</span>
+                </div>
+            </div>
+        
+            <div class="project-item">
+                <h3>Front-End Projects</h3>
+                <div class="experience-date">Aug 2024</div>
+                <p>Developed responsive web applications including Twitter and YouTube clones, focusing on clean design and user experience.</p>
+                <div class="skills-list">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </div>
+        </section>
 
-            <!-- DEPI -->
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>Intern, Digital Egypt Pioneers Initiative - DEPI</h3>
-                    <p>
-                        Mastered Python data structures, visualization tools (Pandas, NumPy, Matplotlib), 
-                        basic ML, and key soft skills. Learned CV building, interview tips, plus 
-                        OOP in Python.
-                    </p>
-                </div>
+        <section class="section" id="certifications">
+            <h2>Certifications</h2>
+            
+            <div class="certification-item">
+                <h3>Pre Security Certification</h3>
+                <div class="certification-issuer">TryHackMe · Jan 2025</div>
+                <div class="certification-id">Credential ID: THM-RBYGX8KK2C</div>
+                <p>Successfully completed the Pre Security learning path, gaining foundational skills in cyber security, networking, web fundamentals, Linux, and Windows.</p>
             </div>
+        
+            <div class="certification-item">
+                <h3>Python (Basic) Certification</h3>
+                <div class="certification-issuer">HackerRank · Jan 2025</div>
+                <div class="certification-id">Credential ID: 699e0c8edce4</div>
+                <p>Demonstrated proficiency in core Python concepts like data types, control flow, strings, collections, and OOP.</p>
+            </div>
+        
+            <div class="certification-item">
+                <h3>SQL (Basic) Certification</h3>
+                <div class="certification-issuer">HackerRank · Jan 2025</div>
+                <div class="certification-id">Credential ID: f1932d139c53</div>
+                <p>Demonstrated proficiency in writing simple queries, managing relationships, and utilizing aggregators.</p>
+            </div>
+        
+            <div class="certification-item">
+                <h3>Connect and Protect: Networks and Network Security</h3>
+                <div class="certification-issuer">Google Career Certificates · Jan 2025</div>
+                <div class="certification-id">Credential ID: GP3LCWLDY17W</div>
+                <p>Completed with 98.81% grade, covering network architecture, TCP/IP, security hardening, and intrusion prevention.</p>
+            </div>
+        
+            <div class="certification-item">
+                <h3>Play It Safe: Manage Security Risks</h3>
+                <div class="certification-issuer">Google Career Certificates · Jan 2025</div>
+                <div class="certification-id">Credential ID: LHF1CQWEU7Q3</div>
+                <p>Completed with 97.32% grade, mastering risk management, NIST frameworks, security audits, and incident response.</p>
+            </div>
+        
+            <div class="certification-item">
+                <h3>Foundations of Cybersecurity</h3>
+                <div class="certification-issuer">Google Career Certificates · Dec 2024</div>
+                <div class="certification-id">Credential ID: DNZG7XURSSZB</div>
+                <p>Completed with 98.15% grade, covering cybersecurity fundamentals, NIST frameworks, and security tools.</p>
+            </div>
+        
+            <div class="certification-item">
+                <h3>Introduction to Security Principles in Cloud Computing</h3>
+                <div class="certification-issuer">Google Cloud · Oct 2024</div>
+                <div class="certification-id">Credential ID: 07FPZNPI8WMH</div>
+                <p>Achieved 100% grade, mastering cloud security fundamentals and digital transformation concepts.</p>
+            </div>
+        
+            <div class="certification-item">
+                <h3>Data Literacy Certifications</h3>
+                <div class="certification-issuer">SAS · Aug 2024</div>
+                <p>Completed Data Literacy Essentials and Data Literacy in Practice certifications.</p>
+            </div>
+        
+            <div class="certification-item">
+                <h3>Java (Basic) Certification</h3>
+                <div class="certification-issuer">HackerRank · Jul 2024</div>
+                <div class="certification-id">Credential ID: 16134779d953</div>
+                <p>Successfully passed the Java certification, demonstrating proficiency in core Java programming concepts.</p>
+            </div>
+        </section>
 
-            <!-- ITI -->
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>Internship Trainee, Information Technology Institute (ITI)</h3>
-                    <p>
-                        Learned Scratch, HTML, CSS, and foundational coding in three weeks, 
-                        building interactive projects with strong collaboration and time management.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Offense Crest -->
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-user-secret" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>Intern, Offense Crest</h3>
-                    <p>
-                        Gained hands-on experience in cybersecurity, C/C++, assembly, and OOP 
-                        with networking. Implemented AES encryption in Assembly on Linux.
-                    </p>
+        <section class="section" id="skills">
+            <h2>Skills</h2>
+        
+            <div class="skills-category">
+                <h3>Programming Languages</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C/C++</span>
+                    <span class="skill-tag">Assembly</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">JavaScript</span>
                 </div>
             </div>
-
-            <!-- More roles can be added similarly if needed -->
-
-        </div>
-    </section>
-
-    <!-- Services Section (optional) -->
-    <section class="cards" id="services" aria-labelledby="services-heading">
-        <h2 id="services-heading" class="title">Services</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-brands fa-java" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>Java Coding</h3>
-                    <p>Robust and efficient Java applications for various systems.</p>
+        
+            <div class="skills-category">
+                <h3>Cybersecurity</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Network Security</span>
+                    <span class="skill-tag">Cryptography</span>
+                    <span class="skill-tag">Malware Analysis</span>
+                    <span class="skill-tag">Security Audits</span>
+                    <span class="skill-tag">NIST Framework</span>
+                    <span class="skill-tag">Incident Response</span>
                 </div>
             </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-brands fa-python" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>Python Coding</h3>
-                    <p>Scripting, automation, and scalable software solutions.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-r" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>Data Visualization in R</h3>
-                    <p>Compelling and insightful R Studio visualizations.</p>
+        
+            <div class="skills-category">
+                <h3>Data Analysis</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Data Cleaning</span>
+                    <span class="skill-tag">Statistical Analysis</span>
+                    <span class="skill-tag">Data Visualization</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">Jupyter</span>
                 </div>
             </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>HTML Coding</h3>
-                    <p>Semantic website structure for clarity and SEO performance.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>CSS Styling</h3>
-                    <p>Responsive, visually appealing designs for all devices.</p>
+        
+            <div class="skills-category">
+                <h3>Tools & Technologies</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">TCP/IP</span>
+                    <span class="skill-tag">Cloud Technologies</span>
+                    <span class="skill-tag">GUI Development</span>
                 </div>
             </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-brands fa-js" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>JavaScript Functionality</h3>
-                    <p>Interactive elements and dynamic features for user engagement.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>Performance Optimization</h3>
-                    <p>Best practices for faster loading times and smooth UX.</p>
+        
+            <div class="skills-category">
+                <h3>Languages</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Arabic</span>
+                    <span class="skill-tag">English</span>
+                    <span class="skill-tag">French (DELF B1)</span>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading" class="title">Projects</h2>
-        <div class="content">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/java.jpeg" alt="Java Projects"/>
-                </div>
-                <div class="project-info">
-                    <p class="project-category">
-                        Multiple Java applications: Bank System, E-commerce, Hotel & Airport Management.
-                    </p>
-                    <strong class="project-title">
-                        <span>Java Projects</span>
-                        <a href="https://github.com/AS2812/java-projects" class="more-details" aria-label="More details about Java Projects">More details</a>
-                    </strong>
+        </section>
+        <section class="section" id="volunteering">
+            <h2>Volunteering</h2>
+            
+            <div class="experience-item">
+                <h3 class="experience-title">Volunteer</h3>
+                <div class="experience-company">IEEE AlexCSC - Activities Committee</div>
+                <div class="experience-date">Feb 2024 - Sep 2024 · Alexandria, Egypt</div>
+                <p>Active member of the IEEE Computer Society Student Chapter at Alexandria University. Received Outstanding Volunteer certificate for contributions to STEM education and technology promotion. Organized technical workshops and community outreach events.</p>
+                <div class="skills-list">
+                    <span class="skill-tag">Event Planning</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Community Outreach</span>
+                    <span class="skill-tag">STEM Education</span>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/python.jpeg" alt="Python Projects"/>
-                </div>
-                <div class="project-info">
-                    <p class="project-category">
-                        Python projects covering algorithms, BFS, DFS, chess, 8-Queens, and simple games.
-                    </p>
-                    <strong class="project-title">
-                        <span>Python Projects</span>
-                        <a href="https://github.com/AS2812/python_projects" class="more-details" aria-label="More details about Python Projects">More details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/data science.jpeg" alt="Data Science"/>
-                </div>
-                <div class="project-info">
-                    <p class="project-category">
-                        Data science in R, covering data manipulation, visualization, and analysis via Shiny apps.
-                    </p>
-                    <strong class="project-title">
-                        <span>Data Visualizations</span>
-                        <a href="https://github.com/AS2812/data_science" class="more-details" aria-label="More details about Data Science Projects">More details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/data structure.jpeg" alt="Data Structure Projects"/>
-                </div>
-                <div class="project-info">
-                    <p class="project-category">
-                        Sorting algorithms, sparse tables, restaurant system, and a hotel system in Java.
-                    </p>
-                    <strong class="project-title">
-                        <span>Data Structure Projects</span>
-                        <a href="https://github.com/AS2812/java-projects/tree/java/data-structure-projects" class="more-details" aria-label="More details about Data Structure Projects">More details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/malware.jpeg" alt="Malware Development"/>
-                </div>
-                <div class="project-info">
-                    <p class="project-category">
-                        RansomSafe AES encryption and keyloggers in Python for educational purposes.
-                    </p>
-                    <strong class="project-title">
-                        <span>Malware Development Projects</span>
-                        <a href="https://github.com/AS2812/-MalwareDevelopmentToolkit" class="more-details" aria-label="More details about Malware Development Projects">More details</a>
-                    </strong>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="cards contact" id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading" class="title">Let's work together</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>Phone</h3>
-                    <p>+201200866039</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
-                </div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <p>ahmedchacker@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p class="footer-title">Copyrights ©
-            <span>Ahmed Shacker</span>
-        </p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/ahmed-shacker-helmi-44a3762a4/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/AS2812" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/__shacker__/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-    </footer>
-
+        </section>
+    </main>
 </body>
 </html>
