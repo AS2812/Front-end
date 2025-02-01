@@ -35,6 +35,11 @@
       line-height: 1.6;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -42,26 +47,36 @@
     }
 
     /* ------------------------- NAVIGATION ------------------------- */
-    nav {
+    header nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0;
+      padding: 15px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(13, 13, 13, 0.95);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    nav a {
-      color: var(--text-color);
-      text-decoration: none;
-      margin: 0 10px;
+    nav .branding h2 {
+      font-size: 1.5em;
+      color: var(--primary-color);
+    }
+
+    nav .nav-links a {
+      margin: 0 15px;
       font-weight: 600;
+      transition: color 0.3s ease;
     }
 
-    nav a:hover {
+    nav .nav-links a:hover {
       color: var(--primary-color);
     }
 
     /* ------------------------- HEADER / HERO ------------------------- */
-    header {
+    header.hero {
       position: relative;
       height: 80vh;
       background: url('main.png') center/cover no-repeat;
@@ -70,10 +85,10 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: var(--text-color);
+      margin-top: 70px; /* To offset fixed nav */
     }
 
-    header::before {
+    header.hero::before {
       content: "";
       position: absolute;
       top: 0;
@@ -123,9 +138,9 @@
 
     .card-section p {
       line-height: 1.6;
+      margin-bottom: 15px;
     }
 
-    /* Experience, Projects, Certifications, Volunteering */
     .item {
       margin-bottom: 25px;
       border-bottom: 1px solid var(--secondary-color);
@@ -141,7 +156,7 @@
       margin: 5px 0;
     }
 
-    /* Skills */
+    /* Skill Tags */
     .skill-tag {
       display: inline-block;
       margin: 5px;
@@ -155,6 +170,119 @@
     .skill-tag:hover {
       background-color: var(--primary-color);
       color: var(--background-color);
+    }
+
+    /* ------------------------- PROJECTS ------------------------- */
+    .project {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .project-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .project-info a {
+      color: var(--primary-color);
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* ------------------------- SERVICES ------------------------- */
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .service-item {
+      background-color: var(--card-background);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      flex: 1 1 250px;
+      max-width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-item img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .service-item h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    /* ------------------------- CONTACT ------------------------- */
+    .contact-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    .contact-info a {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    form.contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    form.contact-form .input-group {
+      margin-bottom: 15px;
+    }
+
+    form.contact-form input,
+    form.contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--secondary-color);
+      border-radius: 4px;
+      background-color: var(--card-background);
+      color: var(--text-color);
+    }
+
+    form.contact-form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    form.contact-form button {
+      background-color: var(--primary-color);
+      color: var(--background-color);
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form.contact-form button:hover {
+      background-color: #e07a00;
     }
 
     /* ------------------------- FOOTER ------------------------- */
@@ -176,10 +304,7 @@
 
     /* ------------------------- RESPONSIVE ------------------------- */
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-      }
-      header {
+      header.hero {
         height: 60vh;
       }
       .hero-content h1 {
@@ -187,6 +312,16 @@
       }
       .hero-content p {
         font-size: 1em;
+      }
+      nav {
+        flex-direction: column;
+      }
+      .project {
+        flex-direction: column;
+      }
+      .services-grid {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -198,34 +333,70 @@
     <header>
       <nav class="container">
         <div class="branding">
-          <!-- You can replace this text with a logo if desired -->
           <h2>Ahmed Shacker Helmi</h2>
         </div>
         <div class="nav-links">
           <a href="#about">About</a>
+          <a href="#services">Services</a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#certifications">Certifications</a>
           <a href="#skills">Skills</a>
           <a href="#volunteering">Volunteering</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
       <div class="hero-content container">
         <h1>Ahmed Shacker Helmi</h1>
         <p>Cybersecurity Student at Alexandria University | Data Analyst Specialist Trainee</p>
         <p>Alexandria, Egypt</p>
       </div>
-    </header>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="section card-section about">
       <div class="container">
         <h1 class="section-heading">About Me</h1>
-        <p>I am a Computer Science student at Alexandria University, specializing in Cybersecurity. My expertise spans both offensive and defensive security, with hands-on experience in ethical hacking, network security, and cryptography.</p>
-        <p>I have completed certifications from TryHackMe, Google Cybersecurity, and the SOC roadmap, and am actively pursuing the Google Cybersecurity Professional Certificate on Coursera. My skills include vulnerability assessment, penetration testing, and threat analysis, which I’ve developed through real-world projects and internships.</p>
-        <p>In addition to cybersecurity, I have strong data analysis capabilities using Python, SQL, Tableau, and have earned certifications from SAS and CIB. I also have experience in full-stack development, currently enhancing my skills through HackerRank to better support my freelance work in both cybersecurity and web development.</p>
-        <p>My internship experiences at Offense Crest, ITI, and ITIDA have allowed me to apply my knowledge in real-world scenarios, solving complex security challenges. I'm constantly learning and adapting to new technologies to stay on the cutting edge of cybersecurity.</p>
-        <p>I’m actively seeking freelance opportunities to leverage my expertise in cybersecurity and full-stack development.</p>
+        <p>
+          I am a passionate Computer Science student specializing in Cybersecurity and Data Analysis. My background in ethical hacking, network security, and vulnerability assessment—combined with my data analysis expertise—ensures that I deliver innovative solutions to complex challenges. If you’re looking for someone who can take on your toughest security or data projects and turn them into success stories, then let’s connect. I am ready to attack your business challenges head on and help you succeed.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section card-section services">
+      <div class="container">
+        <h1 class="section-heading">Services</h1>
+        <div class="services-grid">
+          <!-- Service 1: Cybersecurity Assessment -->
+          <div class="service-item">
+            <img src="./images/icon-security.svg" alt="Cybersecurity Icon">
+            <h3>Cybersecurity Assessment</h3>
+            <p>Performing comprehensive security audits, penetration testing, and vulnerability assessments to safeguard your digital assets.</p>
+          </div>
+          <!-- Service 2: Data Analysis -->
+          <div class="service-item">
+            <img src="./images/icon-data.svg" alt="Data Analysis Icon">
+            <h3>Data Analysis</h3>
+            <p>Transforming complex data sets into actionable insights using Python, SQL, Tableau, and advanced analytics techniques.</p>
+          </div>
+          <!-- Service 3: Web Development -->
+          <div class="service-item">
+            <img src="./images/icon-web.svg" alt="Web Development Icon">
+            <h3>Web Development</h3>
+            <p>Developing responsive and secure web applications to enhance your online presence and drive business growth.</p>
+          </div>
+          <!-- Service 4: Consulting & Strategy -->
+          <div class="service-item">
+            <img src="./images/icon-consult.svg" alt="Consulting Icon">
+            <h3>Consulting & Strategy</h3>
+            <p>Providing expert advice and strategic planning to help you optimize your technology and security investments.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -265,48 +436,68 @@
     <section id="projects" class="section card-section projects">
       <div class="container">
         <h1 class="section-heading">Projects</h1>
-        <div class="item">
-          <h2>Comprehensive Retail Analytics</h2>
-          <p><em>Dec 2024</em></p>
-          <p>Performed in-depth exploratory data analysis on retail sales data, identifying key trends in product categories, regional performance, and customer segmentation. Used Python and Jupyter for data visualization and statistical analysis.</p>
-          <div>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Data Analysis</span>
-            <span class="skill-tag">Jupyter</span>
-            <span class="skill-tag">Data Visualization</span>
+        <!-- Project 1 -->
+        <div class="item project">
+          <div class="project-info">
+            <h2>Comprehensive Retail Analytics</h2>
+            <p><em>Dec 2024</em></p>
+            <p>
+              Performed in-depth exploratory data analysis on retail sales data, identifying key trends in product categories, regional performance, and customer segmentation. Utilized Python and Jupyter for visualization.
+            </p>
+            <a href="https://github.com/AS2812/data_science/tree/main/DEPI-data-analysis" target="_blank">View Project on GitHub</a>
+          </div>
+          <div class="project-image">
+            <a href="https://github.com/AS2812/data_science/tree/main/DEPI-data-analysis" target="_blank">
+              <img src="./images/project-retail-analytics.png" alt="Comprehensive Retail Analytics">
+            </a>
           </div>
         </div>
-        <div class="item">
-          <h2>RansomSafe: AES Encryption Tool</h2>
-          <p><em>Oct 2024 - Nov 2024</em></p>
-          <p>Developed a ransomware simulation project combining Assembly, C, and Python for secure file handling. Implemented AES encryption using OpenSSL and created a Python GUI for demonstration purposes.</p>
-          <div>
-            <span class="skill-tag">Assembly</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">AES</span>
-            <span class="skill-tag">GUI</span>
+        <!-- Project 2 -->
+        <div class="item project">
+          <div class="project-info">
+            <h2>RansomSafe: AES Encryption Tool</h2>
+            <p><em>Oct 2024 - Nov 2024</em></p>
+            <p>
+              Developed a ransomware simulation project combining Assembly, C, and Python for secure file handling. Implemented AES encryption using OpenSSL with a custom Python GUI.
+            </p>
+            <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
+          </div>
+          <div class="project-image">
+            <a href="https://github.com/AS2812/data_science" target="_blank">
+              <img src="./images/project-ransomsafe.png" alt="RansomSafe: AES Encryption Tool">
+            </a>
           </div>
         </div>
-        <div class="item">
-          <h2>Customer Data Analysis</h2>
-          <p><em>Sep 2024</em></p>
-          <p>Created a Shiny application for customer behavior analysis featuring data visualization, k-means clustering, and association rule mining. Implemented CSV file handling and interactive visualizations.</p>
-          <div>
-            <span class="skill-tag">R</span>
-            <span class="skill-tag">Data Mining</span>
-            <span class="skill-tag">Clustering</span>
-            <span class="skill-tag">Visualization</span>
+        <!-- Project 3 -->
+        <div class="item project">
+          <div class="project-info">
+            <h2>Customer Data Analysis</h2>
+            <p><em>Sep 2024</em></p>
+            <p>
+              Created an interactive Shiny application for customer behavior analysis featuring data visualization, clustering, and association rule mining.
+            </p>
+            <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
+          </div>
+          <div class="project-image">
+            <a href="https://github.com/AS2812/data_science" target="_blank">
+              <img src="./images/project-customer-data.png" alt="Customer Data Analysis">
+            </a>
           </div>
         </div>
-        <div class="item">
-          <h2>Front-End Projects</h2>
-          <p><em>Aug 2024</em></p>
-          <p>Developed responsive web applications including Twitter and YouTube clones, focusing on clean design and user experience.</p>
-          <div>
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">Responsive Design</span>
+        <!-- Project 4 -->
+        <div class="item project">
+          <div class="project-info">
+            <h2>Front-End Projects</h2>
+            <p><em>Aug 2024</em></p>
+            <p>
+              Developed responsive web applications including Twitter and YouTube clones with a focus on clean design and user experience.
+            </p>
+            <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
+          </div>
+          <div class="project-image">
+            <a href="https://github.com/AS2812/data_science" target="_blank">
+              <img src="./images/project-frontend.png" alt="Front-End Projects">
+            </a>
           </div>
         </div>
       </div>
@@ -319,54 +510,54 @@
         <div class="item">
           <h2>Pre Security Certification</h2>
           <p><strong>TryHackMe · Jan 2025</strong></p>
-          <p>Successfully completed the Pre Security learning path, gaining foundational skills in cyber security, networking, web fundamentals, Linux, and Windows.</p>
+          <p>Completed the Pre Security learning path, gaining foundational skills in cybersecurity, networking, and system administration.</p>
           <p><em>Credential ID: THM-RBYGX8KK2C</em></p>
         </div>
         <div class="item">
           <h2>Python (Basic) Certification</h2>
           <p><strong>HackerRank · Jan 2025</strong></p>
-          <p>Demonstrated proficiency in core Python concepts like data types, control flow, strings, collections, and OOP.</p>
+          <p>Demonstrated proficiency in core Python concepts including data types, control flow, and OOP.</p>
           <p><em>Credential ID: 699e0c8edce4</em></p>
         </div>
         <div class="item">
           <h2>SQL (Basic) Certification</h2>
           <p><strong>HackerRank · Jan 2025</strong></p>
-          <p>Demonstrated proficiency in writing simple queries, managing relationships, and utilizing aggregators.</p>
+          <p>Demonstrated proficiency in writing queries and managing relational data.</p>
           <p><em>Credential ID: f1932d139c53</em></p>
         </div>
         <div class="item">
           <h2>Connect and Protect: Networks and Network Security</h2>
           <p><strong>Google Career Certificates · Jan 2025</strong></p>
-          <p>Completed with 98.81% grade, covering network architecture, TCP/IP, security hardening, and intrusion prevention.</p>
+          <p>Covered network architecture, TCP/IP, and security hardening techniques.</p>
           <p><em>Credential ID: GP3LCWLDY17W</em></p>
         </div>
         <div class="item">
           <h2>Play It Safe: Manage Security Risks</h2>
           <p><strong>Google Career Certificates · Jan 2025</strong></p>
-          <p>Completed with 97.32% grade, mastering risk management, NIST frameworks, security audits, and incident response.</p>
+          <p>Mastered risk management, NIST frameworks, and incident response procedures.</p>
           <p><em>Credential ID: LHF1CQWEU7Q3</em></p>
         </div>
         <div class="item">
           <h2>Foundations of Cybersecurity</h2>
           <p><strong>Google Career Certificates · Dec 2024</strong></p>
-          <p>Completed with 98.15% grade, covering cybersecurity fundamentals, NIST frameworks, and security tools.</p>
+          <p>Covered cybersecurity fundamentals, NIST frameworks, and essential security tools.</p>
           <p><em>Credential ID: DNZG7XURSSZB</em></p>
         </div>
         <div class="item">
           <h2>Introduction to Security Principles in Cloud Computing</h2>
           <p><strong>Google Cloud · Oct 2024</strong></p>
-          <p>Achieved 100% grade, mastering cloud security fundamentals and digital transformation concepts.</p>
+          <p>Mastered cloud security fundamentals and digital transformation concepts.</p>
           <p><em>Credential ID: 07FPZNPI8WMH</em></p>
         </div>
         <div class="item">
           <h2>Data Literacy Certifications</h2>
           <p><strong>SAS · Aug 2024</strong></p>
-          <p>Completed Data Literacy Essentials and Data Literacy in Practice certifications.</p>
+          <p>Completed certifications in Data Literacy Essentials and Data Literacy in Practice.</p>
         </div>
         <div class="item">
           <h2>Java (Basic) Certification</h2>
           <p><strong>HackerRank · Jul 2024</strong></p>
-          <p>Successfully passed the Java certification, demonstrating proficiency in core Java programming concepts.</p>
+          <p>Demonstrated proficiency in core Java programming concepts.</p>
           <p><em>Credential ID: 16134779d953</em></p>
         </div>
       </div>
@@ -437,7 +628,9 @@
         <div class="item">
           <h2>Volunteer</h2>
           <p><strong>IEEE AlexCSC - Activities Committee</strong> | Feb 2024 - Sep 2024 · Alexandria, Egypt</p>
-          <p>Active member of the IEEE Computer Society Student Chapter at Alexandria University. Received an Outstanding Volunteer certificate for contributions to STEM education and technology promotion. Organized technical workshops and community outreach events.</p>
+          <p>
+            Active member of the IEEE Computer Society Student Chapter at Alexandria University. Recognized with an Outstanding Volunteer certificate for contributions to STEM education, technology promotion, and community outreach.
+          </p>
           <div>
             <span class="skill-tag">Event Planning</span>
             <span class="skill-tag">Leadership</span>
@@ -448,15 +641,44 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section card-section contact">
+      <div class="container">
+        <h1 class="section-heading">Contact Me</h1>
+        <div class="contact-info">
+          <p><strong>Phone:</strong> <a href="tel:+201200866039">+20 1200 866039</a></p>
+          <p><strong>Email:</strong> <a href="mailto:ahmedchacker@gmail.com">ahmedchacker@gmail.com</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/AS2812" target="_blank">github.com/AS2812</a></p>
+        </div>
+        <form class="contact-form">
+          <div class="input-group">
+            <input type="text" placeholder="Your Name *" required>
+          </div>
+          <div class="input-group">
+            <input type="email" placeholder="Your Email *" required>
+          </div>
+          <div class="input-group">
+            <input type="text" placeholder="Subject">
+          </div>
+          <div class="input-group">
+            <textarea placeholder="Your Message..." required></textarea>
+          </div>
+          <div class="input-group">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
       <img src="./images/logo-2.svg" alt="Logo">
       <div class="footer-socials">
-        <a href="#"><img src="./images/website.svg" alt=""></a>
-        <a href="https://www.facebook.com/codersgyan"><img src="./images/facebook.svg" alt=""></a>
-        <a href="https://twitter.com/CoderGyan"><img src="./images/twitter.svg" alt=""></a>
-        <a href="#"><img src="./images/pintrest.svg" alt=""></a>
-        <a href="https://www.instagram.com/codersgyan/"><img src="./images/instagram.svg" alt=""></a>
+        <a href="#"><img src="./images/website.svg" alt="Website"></a>
+        <a href="https://www.facebook.com/codersgyan"><img src="./images/facebook.svg" alt="Facebook"></a>
+        <a href="https://twitter.com/CoderGyan"><img src="./images/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="./images/pintrest.svg" alt="Pinterest"></a>
+        <a href="https://www.instagram.com/codersgyan/"><img src="./images/instagram.svg" alt="Instagram"></a>
       </div>
       <div class="copyright">
         &copy; 2025 Ahmed Shacker Helmi. All Rights Reserved.
@@ -464,12 +686,11 @@
     </footer>
   </div>
 
-  <!-- Slick Carousel JS -->
+  <!-- Slick Carousel JS (if needed for any slider components) -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script>
-    // Initialize slick slider if needed (for any slider components)
     $(document).ready(function () {
       $('.slider').slick({
         dots: true,
