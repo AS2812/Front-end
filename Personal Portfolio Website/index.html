@@ -8,7 +8,11 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-  <!-- Slick Carousel CSS -->
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-papNM8B+zAYP+Ejx/ScVE18P9mBRPFL0F+NjGz7IhpDK1dcGiEJZIMxEMfBfLJf/whuEcp4PjqjU2V7uHc2fQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Slick Carousel CSS (if needed) -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <!-- Custom CSS -->
   <style>
@@ -75,7 +79,7 @@
       color: var(--primary-color);
     }
 
-    /* ------------------------- HEADER / HERO ------------------------- */
+    /* ------------------------- HERO / HEADER ------------------------- */
     header.hero {
       position: relative;
       height: 80vh;
@@ -85,7 +89,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-top: 70px; /* To offset fixed nav */
+      margin-top: 70px; /* offset fixed nav */
     }
 
     header.hero::before {
@@ -137,8 +141,8 @@
     }
 
     .card-section p {
-      line-height: 1.6;
       margin-bottom: 15px;
+      line-height: 1.6;
     }
 
     .item {
@@ -156,7 +160,7 @@
       margin: 5px 0;
     }
 
-    /* Skill Tags */
+    /* ------------------------- SKILL TAGS ------------------------- */
     .skill-tag {
       display: inline-block;
       margin: 5px;
@@ -239,6 +243,7 @@
 
     .contact-info p {
       margin: 10px 0;
+      font-size: 1.1em;
     }
 
     .contact-info a {
@@ -300,6 +305,12 @@
 
     footer .footer-socials a {
       margin: 0 5px;
+      font-size: 1.5em;
+      transition: color 0.3s ease;
+    }
+
+    footer .footer-socials a:hover {
+      color: var(--primary-color);
     }
 
     /* ------------------------- RESPONSIVE ------------------------- */
@@ -362,8 +373,14 @@
       <div class="container">
         <h1 class="section-heading">About Me</h1>
         <p>
-          I am a passionate Computer Science student specializing in Cybersecurity and Data Analysis. My background in ethical hacking, network security, and vulnerability assessment—combined with my data analysis expertise—ensures that I deliver innovative solutions to complex challenges. If you’re looking for someone who can take on your toughest security or data projects and turn them into success stories, then let’s connect. I am ready to attack your business challenges head on and help you succeed.
+          I am a passionate Computer Science student specializing in Cybersecurity and Data Analysis. With robust expertise in ethical hacking, network security, and vulnerability assessment, I’m the ideal partner to help your business overcome digital challenges. If you’re looking for a dedicated professional to secure your systems and turn data into actionable insights, then let’s connect!
         </p>
+        <div class="social" style="text-align: center; margin-top: 20px;">
+          <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/AS2812" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe"><i class="fas fa-shield-alt"></i></a>
+          <a href="https://www.instagram.com/__shacker__" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </section>
 
@@ -374,27 +391,27 @@
         <div class="services-grid">
           <!-- Service 1: Cybersecurity Assessment -->
           <div class="service-item">
-            <img src="./images/icon-security.svg" alt="Cybersecurity Icon">
+            <img src="https://via.placeholder.com/60?text=Sec" alt="Cybersecurity Icon">
             <h3>Cybersecurity Assessment</h3>
-            <p>Performing comprehensive security audits, penetration testing, and vulnerability assessments to safeguard your digital assets.</p>
+            <p>Comprehensive security audits, penetration testing, and vulnerability assessments to protect your digital assets.</p>
           </div>
           <!-- Service 2: Data Analysis -->
           <div class="service-item">
-            <img src="./images/icon-data.svg" alt="Data Analysis Icon">
+            <img src="https://via.placeholder.com/60?text=Data" alt="Data Analysis Icon">
             <h3>Data Analysis</h3>
-            <p>Transforming complex data sets into actionable insights using Python, SQL, Tableau, and advanced analytics techniques.</p>
+            <p>Transforming complex data into actionable insights using Python, SQL, and advanced analytics techniques.</p>
           </div>
           <!-- Service 3: Web Development -->
           <div class="service-item">
-            <img src="./images/icon-web.svg" alt="Web Development Icon">
+            <img src="https://via.placeholder.com/60?text=Web" alt="Web Development Icon">
             <h3>Web Development</h3>
-            <p>Developing responsive and secure web applications to enhance your online presence and drive business growth.</p>
+            <p>Developing secure, responsive web applications that enhance your online presence and drive growth.</p>
           </div>
           <!-- Service 4: Consulting & Strategy -->
           <div class="service-item">
-            <img src="./images/icon-consult.svg" alt="Consulting Icon">
+            <img src="https://via.placeholder.com/60?text=Con" alt="Consulting Icon">
             <h3>Consulting & Strategy</h3>
-            <p>Providing expert advice and strategic planning to help you optimize your technology and security investments.</p>
+            <p>Expert advice and strategic planning to optimize your technology and security investments.</p>
           </div>
         </div>
       </div>
@@ -412,12 +429,12 @@
         <div class="item">
           <h2>Internship Trainee</h2>
           <p><strong>Information Technology Institute (ITI)</strong> | Sep 2024 - Oct 2024 · Alexandria, Egypt · Remote</p>
-          <p>Completed comprehensive training in web development fundamentals including Scratch, CSS, HTML, and CS50. Developed interactive projects and gained strong problem-solving skills.</p>
+          <p>Completed comprehensive training in web development fundamentals including Scratch, CSS, HTML, and CS50. Developed interactive projects and enhanced problem-solving skills.</p>
         </div>
         <div class="item">
           <h2>Intern</h2>
           <p><strong>Offense Crest</strong> | Aug 2024 - Oct 2024 · Alexandria, Egypt · Hybrid</p>
-          <p>Specialized in Cybersecurity, C/C++, Assembly, and networking. Implemented AES encryption in Assembly on Linux and gained expertise in system-level programming.</p>
+          <p>Specialized in Cybersecurity, C/C++, Assembly, and networking. Implemented AES encryption in Assembly on Linux and gained system-level programming expertise.</p>
         </div>
         <div class="item">
           <h2>Internship Trainee</h2>
@@ -427,7 +444,7 @@
         <div class="item">
           <h2>Internship Trainee</h2>
           <p><strong>CIB Egypt</strong> | Aug 2024 - Sep 2024 · Alexandria, Egypt · Remote</p>
-          <p>Focused on Data Literacy and Digital Transformation. Completed CIB Summer Bootcamp on leadership and earned certifications in business technology integration.</p>
+          <p>Focused on Data Literacy and Digital Transformation. Completed the CIB Summer Bootcamp on leadership and earned certifications in business technology integration.</p>
         </div>
       </div>
     </section>
@@ -442,13 +459,13 @@
             <h2>Comprehensive Retail Analytics</h2>
             <p><em>Dec 2024</em></p>
             <p>
-              Performed in-depth exploratory data analysis on retail sales data, identifying key trends in product categories, regional performance, and customer segmentation. Utilized Python and Jupyter for visualization.
+              In-depth exploratory data analysis on retail sales data, identifying trends in product categories, regional performance, and customer segmentation. Utilized Python and Jupyter for data visualization.
             </p>
             <a href="https://github.com/AS2812/data_science/tree/main/DEPI-data-analysis" target="_blank">View Project on GitHub</a>
           </div>
           <div class="project-image">
             <a href="https://github.com/AS2812/data_science/tree/main/DEPI-data-analysis" target="_blank">
-              <img src="./images/project-retail-analytics.png" alt="Comprehensive Retail Analytics">
+              <img src="Screenshot_1-2-2025_153829_.jpeg" alt="Retail Analytics Project">
             </a>
           </div>
         </div>
@@ -458,13 +475,13 @@
             <h2>RansomSafe: AES Encryption Tool</h2>
             <p><em>Oct 2024 - Nov 2024</em></p>
             <p>
-              Developed a ransomware simulation project combining Assembly, C, and Python for secure file handling. Implemented AES encryption using OpenSSL with a custom Python GUI.
+              A ransomware simulation project combining Assembly, C, and Python for secure file handling. Implemented AES encryption using OpenSSL and a custom Python GUI.
             </p>
             <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
           </div>
           <div class="project-image">
             <a href="https://github.com/AS2812/data_science" target="_blank">
-              <img src="./images/project-ransomsafe.png" alt="RansomSafe: AES Encryption Tool">
+              <img src="Screenshot_1-2-2025_153915_.jpeg" alt="RansomSafe Project">
             </a>
           </div>
         </div>
@@ -474,13 +491,13 @@
             <h2>Customer Data Analysis</h2>
             <p><em>Sep 2024</em></p>
             <p>
-              Created an interactive Shiny application for customer behavior analysis featuring data visualization, clustering, and association rule mining.
+              An interactive Shiny application for customer behavior analysis featuring data visualization, clustering, and association rule mining.
             </p>
             <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
           </div>
           <div class="project-image">
             <a href="https://github.com/AS2812/data_science" target="_blank">
-              <img src="./images/project-customer-data.png" alt="Customer Data Analysis">
+              <img src="Screenshot_1-2-2025_153925_.jpeg" alt="Customer Data Analysis Project">
             </a>
           </div>
         </div>
@@ -490,14 +507,123 @@
             <h2>Front-End Projects</h2>
             <p><em>Aug 2024</em></p>
             <p>
-              Developed responsive web applications including Twitter and YouTube clones with a focus on clean design and user experience.
+              Responsive web applications including Twitter and YouTube clones focusing on clean design and user experience.
             </p>
             <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
           </div>
           <div class="project-image">
             <a href="https://github.com/AS2812/data_science" target="_blank">
-              <img src="./images/project-frontend.png" alt="Front-End Projects">
+              <img src="Screenshot_1-2-2025_153937_.jpeg" alt="Front-End Projects">
             </a>
+          </div>
+        </div>
+        <!-- Additional project screenshots -->
+        <div class="item project">
+          <div class="project-info">
+            <h2>Additional Project Image</h2>
+            <p><em>Example</em></p>
+            <p>
+              Additional screenshot demonstrating project work.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot_1-2-2025_153944_.jpeg" alt="Additional Project Screenshot">
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Another Project Detail</h2>
+            <p><em>Example</em></p>
+            <p>
+              More examples of project visuals.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot_1-2-2025_153954_.jpeg" alt="Another Project Screenshot">
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Additional Project Detail</h2>
+            <p><em>Example</em></p>
+            <p>
+              Extra project screenshot.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot_1-2-2025_15395_.jpeg" alt="Extra Project Screenshot">
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>More Work Example</h2>
+            <p><em>Example</em></p>
+            <p>
+              Demonstrating further project details.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot_1-2-2025_154011_.jpeg" alt="Work Example Screenshot">
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Extra Project Work</h2>
+            <p><em>Example</em></p>
+            <p>
+              Another extra project visual.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot_1-2-2025_154026_.jpeg" alt="Extra Project Work">
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Additional Detail</h2>
+            <p><em>Example</em></p>
+            <p>
+              More project detail imagery.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot_1-2-2025_154034_.jpeg" alt="Project Detail Screenshot">
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Final Project Example</h2>
+            <p><em>Example</em></p>
+            <p>
+              Final project example screenshot.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot_1-2-2025_154055_.jpeg" alt="Final Project Screenshot">
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Extra Detail 2</h2>
+            <p><em>Example</em></p>
+            <p>
+              One more project screenshot.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot_1-2-2025_15411_.jpeg" alt="Extra Detail Screenshot">
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Additional Work</h2>
+            <p><em>Example</em></p>
+            <p>
+              Another final example of project work.
+            </p>
+          </div>
+          <div class="project-image">
+            <img src="Screenshot_1-2-2025_15417_.jpeg" alt="Additional Work Screenshot">
           </div>
         </div>
       </div>
@@ -646,9 +772,13 @@
       <div class="container">
         <h1 class="section-heading">Contact Me</h1>
         <div class="contact-info">
-          <p><strong>Phone:</strong> <a href="tel:+201200866039">+20 1200 866039</a></p>
-          <p><strong>Email:</strong> <a href="mailto:ahmedchacker@gmail.com">ahmedchacker@gmail.com</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/AS2812" target="_blank">github.com/AS2812</a></p>
+          <p><strong><i class="fas fa-phone"></i> Phone:</strong> <a href="tel:+201200866039">+20 1200 866039</a></p>
+          <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:ahmedchacker@gmail.com">ahmedchacker@gmail.com</a></p>
+          <p><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank">linkedin.com/in/ahmed-shacker-helmi</a></p>
+          <p><strong><i class="fab fa-github"></i> GitHub:</strong> <a href="https://github.com/AS2812" target="_blank">github.com/AS2812</a></p>
+          <p><strong><i class="fas fa-shield-alt"></i> TryHackMe:</strong> <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank">tryhackme.com/r/p/ahmedchacker</a></p>
+          <p><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> Alexandria, Sidigaber, Smouha, Bridge, 14 May, Smouha</p>
+          <p><strong><i class="fab fa-instagram"></i> Instagram:</strong> <a href="https://www.instagram.com/__shacker__" target="_blank">__shacker__</a></p>
         </div>
         <form class="contact-form">
           <div class="input-group">
@@ -672,13 +802,12 @@
 
     <!-- Footer -->
     <footer>
-      <img src="./images/logo-2.svg" alt="Logo">
+      <img src="logo-2.svg" alt="Logo">
       <div class="footer-socials">
-        <a href="#"><img src="./images/website.svg" alt="Website"></a>
-        <a href="https://www.facebook.com/codersgyan"><img src="./images/facebook.svg" alt="Facebook"></a>
-        <a href="https://twitter.com/CoderGyan"><img src="./images/twitter.svg" alt="Twitter"></a>
-        <a href="#"><img src="./images/pintrest.svg" alt="Pinterest"></a>
-        <a href="https://www.instagram.com/codersgyan/"><img src="./images/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/AS2812" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe"><i class="fas fa-shield-alt"></i></a>
+        <a href="https://www.instagram.com/__shacker__" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
       <div class="copyright">
         &copy; 2025 Ahmed Shacker Helmi. All Rights Reserved.
@@ -686,7 +815,7 @@
     </footer>
   </div>
 
-  <!-- Slick Carousel JS (if needed for any slider components) -->
+  <!-- Slick Carousel JS (if needed) -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
