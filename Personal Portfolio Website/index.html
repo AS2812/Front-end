@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,6 +18,12 @@
       --background-color: #0D0D0D; /* Fanta Black */
       --card-background: #1A1A1A; /* Dark Gray */
       --text-color: #FFFFFF;
+      --nav-height: 70px;
+    }
+
+    /* Prevent scrolling anchors from hiding content behind fixed nav */
+    html {
+      scroll-padding-top: var(--nav-height);
     }
 
     /* ------------------------- RESET & GLOBAL ------------------------- */
@@ -64,7 +69,7 @@
       padding: 15px 0;
     }
 
-    /* Branding with two logos */
+    /* Branding with TryHackMe logo */
     .branding {
       display: flex;
       align-items: center;
@@ -92,16 +97,17 @@
     }
 
     /* ------------------------- HERO / HEADER ------------------------- */
+    /* Instead of margin-top, we add padding-top to push content below the fixed nav */
     header.hero {
       position: relative;
-      height: 80vh;
+      min-height: calc(80vh + var(--nav-height));
       background: url('./images/main.png') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-top: 70px; /* offset for fixed nav */
+      padding-top: var(--nav-height);
     }
 
     header.hero::before {
@@ -350,7 +356,7 @@
     /* ------------------------- RESPONSIVE ------------------------- */
     @media (max-width: 768px) {
       header.hero {
-        height: 60vh;
+        min-height: calc(60vh + var(--nav-height));
       }
       .hero-content h1 {
         font-size: 2.5em;
@@ -371,7 +377,6 @@
     }
   </style>
 </head>
-
 <body>
   <div class="site-main-wrapper">
     <!-- Navigation -->
@@ -379,8 +384,8 @@
       <nav>
         <div class="container nav-inner">
           <div class="branding">
-            <!-- Personal Logo -->
-            <img src="Personal Portfolio Website/images/Screenshot 2025-02-02 000443.png" alt="My Logo">
+            <!-- TryHackMe Logo from provided GitHub link -->
+            <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="TryHackMe Logo">
             <!-- Site Name -->
             <h2>Ahmed Shacker Helmi</h2>
           </div>
@@ -393,7 +398,7 @@
             <a href="#skills">Skills</a>
             <a href="#volunteering">Volunteering</a>
             <a href="#contact">Contact</a>
-            <!-- TryHackMe Logo added in nav links for quick access -->
+            <!-- TryHackMe quick access logo -->
             <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe">
               <img src="https://tryhackme.com/images/logo.svg" alt="TryHackMe Logo" style="height:30px; vertical-align:middle;">
             </a>
@@ -402,16 +407,17 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content container">
-        <h1>Ahmed Shacker Helmi</h1>
-        <p>Cybersecurity Student at Alexandria University | Data Analyst Specialist Trainee</p>
-        <p>Alexandria, Egypt</p>
-        <!-- Download CV Button (ensure CV is hosted on your server) -->
-        <a class="btn-cv" href="/files/shacker_cv.pdf" download="Shacker_CV.pdf">Download CV</a>
-      </div>
-    </section>
+<!-- Hero Section -->
+<section class="hero" style="padding-top: 100px;"> <!-- Added padding to avoid navbar overlap -->
+    <div class="hero-content container">
+      <h1>Ahmed Shacker Helmi</h1>
+      <p>Cybersecurity Student at Alexandria University | Data Analyst Specialist Trainee</p>
+      <p>Alexandria, Egypt</p>
+      <!-- Download CV Button with updated link -->
+      <a class="btn-cv" href="https://drive.google.com/uc?export=download&id=1URLU2EjGRji8qEGy6We9DvL3q7wZhfWT" download>Download my CV</a>
+    </div>
+  </section>
+  
 
     <!-- About Section -->
     <section id="about" class="section card-section about">
@@ -874,5 +880,4 @@
     });
   </script>
 </body>
-
 </html>
