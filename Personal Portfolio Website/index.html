@@ -8,10 +8,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-        integrity="sha512-papNM8B+zAYP+Ejx/ScVE18P9mBRPFL0F+NjGz7IhpDK1dcGiEJZIMxEMfBfLJf/whuEcp4PjqjU2V7uHc2fQ==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Slick Carousel CSS (if needed) -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <!-- Custom CSS -->
@@ -299,19 +295,24 @@
       margin-top: 30px;
     }
 
-    footer img {
+    footer img.logo {
       width: 100px;
       margin-bottom: 10px;
     }
 
     footer .footer-socials a {
       margin: 0 5px;
-      font-size: 1.5em;
-      transition: color 0.3s ease;
+      display: inline-block;
+      transition: opacity 0.3s ease;
+    }
+
+    footer .footer-socials a img {
+      width: 32px;
+      height: 32px;
     }
 
     footer .footer-socials a:hover {
-      color: var(--primary-color);
+      opacity: 0.7;
     }
 
     /* ------------------------- RESPONSIVE ------------------------- */
@@ -377,10 +378,19 @@
           I am a passionate Computer Science student specializing in Cybersecurity and Data Analysis. With robust expertise in ethical hacking, network security, and vulnerability assessment, I’m the ideal partner to help your business overcome digital challenges. If you’re looking for a dedicated professional to secure your systems and turn data into actionable insights, then let’s connect!
         </p>
         <div class="social" style="text-align: center; margin-top: 20px;">
-          <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/AS2812" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe"><i class="fas fa-shield-alt"></i></a>
-          <a href="https://www.instagram.com/__shacker__" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <!-- Using externally hosted logo images -->
+          <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:32px; margin:0 10px;">
+          </a>
+          <a href="https://github.com/AS2812" target="_blank" title="GitHub">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width:32px; margin:0 10px;">
+          </a>
+          <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="TryHackMe" style="width:32px; margin:0 10px;">
+          </a>
+          <a href="https://www.instagram.com/__shacker__" target="_blank" title="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:32px; margin:0 10px;">
+          </a>
         </div>
       </div>
     </section>
@@ -755,13 +765,13 @@
       <div class="container">
         <h1 class="section-heading">Contact Me</h1>
         <div class="contact-info">
-          <p><strong><i class="fas fa-phone"></i> Phone:</strong> <a href="tel:+201200866039">+20 1200 866039</a></p>
-          <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:ahmedchacker@gmail.com">ahmedchacker@gmail.com</a></p>
-          <p><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank">linkedin.com/in/ahmed-shacker-helmi</a></p>
-          <p><strong><i class="fab fa-github"></i> GitHub:</strong> <a href="https://github.com/AS2812" target="_blank">github.com/AS2812</a></p>
-          <p><strong><i class="fas fa-shield-alt"></i> TryHackMe:</strong> <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank">tryhackme.com/r/p/ahmedchacker</a></p>
-          <p><strong><i class="fas fa-map-marker-alt"></i> Address:</strong> Alexandria, Sidigaber, Smouha, Bridge, 14 May, Smouha</p>
-          <p><strong><i class="fab fa-instagram"></i> Instagram:</strong> <a href="https://www.instagram.com/__shacker__" target="_blank">__shacker__</a></p>
+          <p><strong><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" style="width:20px; vertical-align:middle;"> Phone:</strong> <a href="tel:+201200866039">+20 1200 866039</a></p>
+          <p><strong><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" style="width:20px; vertical-align:middle;"> Email:</strong> <a href="mailto:ahmedchacker@gmail.com">ahmedchacker@gmail.com</a></p>
+          <p><strong><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:20px; vertical-align:middle;"> LinkedIn:</strong> <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank">linkedin.com/in/ahmed-shacker-helmi</a></p>
+          <p><strong><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width:20px; vertical-align:middle;"> GitHub:</strong> <a href="https://github.com/AS2812" target="_blank">github.com/AS2812</a></p>
+          <p><strong><img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="TryHackMe" style="width:20px; vertical-align:middle;"> TryHackMe:</strong> <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank">tryhackme.com/r/p/ahmedchacker</a></p>
+          <p><strong><img src="https://cdn-icons-png.flaticon.com/512/684/684809.png" alt="Address" style="width:20px; vertical-align:middle;"> Address:</strong> Alexandria, Sidigaber, Smouha, Bridge, 14 May, Smouha</p>
+          <p><strong><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:20px; vertical-align:middle;"> Instagram:</strong> <a href="https://www.instagram.com/__shacker__" target="_blank">__shacker__</a></p>
         </div>
         <form class="contact-form">
           <div class="input-group">
@@ -785,12 +795,20 @@
 
     <!-- Footer -->
     <footer>
-      <img src="./images/1.jpg" alt="Logo">
+      <img class="logo" src="./images/1.jpg" alt="Logo">
       <div class="footer-socials">
-        <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/AS2812" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe"><i class="fas fa-shield-alt"></i></a>
-        <a href="https://www.instagram.com/__shacker__" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/AS2812" target="_blank" title="GitHub">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+        </a>
+        <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="TryHackMe">
+        </a>
+        <a href="https://www.instagram.com/__shacker__" target="_blank" title="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
       </div>
       <div class="copyright">
         &copy; 2025 Ahmed Shacker Helmi. All Rights Reserved.
