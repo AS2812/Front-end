@@ -43,24 +43,40 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 20px;
     }
 
     /* ------------------------- NAVIGATION ------------------------- */
     header nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(13, 13, 13, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 1000;
+    }
+
+    nav .nav-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(13, 13, 13, 0.95);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    nav .branding h2 {
+    /* Branding with two logos */
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .branding img {
+      height: 40px;
+      width: auto;
+    }
+
+    .branding h2 {
       font-size: 1.5em;
       color: var(--primary-color);
     }
@@ -85,7 +101,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-top: 70px; /* offset fixed nav */
+      margin-top: 70px; /* offset for fixed nav */
     }
 
     header.hero::before {
@@ -237,7 +253,6 @@
       transform: translateY(-5px);
     }
 
-    /* Use your uploaded service icons from /images */
     .service-item img {
       width: 60px;
       margin-bottom: 10px;
@@ -343,7 +358,7 @@
       .hero-content p {
         font-size: 1em;
       }
-      nav {
+      nav .nav-inner {
         flex-direction: column;
       }
       .project {
@@ -361,19 +376,28 @@
   <div class="site-main-wrapper">
     <!-- Navigation -->
     <header>
-      <nav class="container">
-        <div class="branding">
-          <h2>Ahmed Shacker Helmi</h2>
-        </div>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#skills">Skills</a>
-          <a href="#volunteering">Volunteering</a>
-          <a href="#contact">Contact</a>
+      <nav>
+        <div class="container nav-inner">
+          <div class="branding">
+            <!-- Personal Logo -->
+            <img src="Personal Portfolio Website/images/Screenshot 2025-02-02 000443.png" alt="My Logo">
+            <!-- Site Name -->
+            <h2>Ahmed Shacker Helmi</h2>
+          </div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#skills">Skills</a>
+            <a href="#volunteering">Volunteering</a>
+            <a href="#contact">Contact</a>
+            <!-- TryHackMe Logo added in nav links for quick access -->
+            <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe">
+              <img src="https://tryhackme.com/images/logo.svg" alt="TryHackMe Logo" style="height:30px; vertical-align:middle;">
+            </a>
+          </div>
         </div>
       </nav>
     </header>
@@ -384,8 +408,8 @@
         <h1>Ahmed Shacker Helmi</h1>
         <p>Cybersecurity Student at Alexandria University | Data Analyst Specialist Trainee</p>
         <p>Alexandria, Egypt</p>
-        <!-- Download CV Button -->
-         <a class="btn-cv" href="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/shacker_cv.pdf" download="Shacker_CV.pdf">Download CV</a>
+        <!-- Download CV Button (ensure CV is hosted on your server) -->
+        <a class="btn-cv" href="/files/shacker_cv.pdf" download="Shacker_CV.pdf">Download CV</a>
       </div>
     </section>
 
@@ -397,7 +421,7 @@
           I am a passionate Computer Science student specializing in Cybersecurity and Data Analysis. With robust expertise in ethical hacking, network security, and vulnerability assessment, I’m the ideal partner to help your business overcome digital challenges. If you’re looking for a dedicated professional to secure your systems and turn data into actionable insights, then let’s connect!
         </p>
         <div class="social" style="text-align: center; margin-top: 20px;">
-          <!-- Social Logos (using externally hosted images) -->
+          <!-- Social Logos -->
           <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn">
             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:32px; margin:0 10px;">
           </a>
@@ -405,7 +429,6 @@
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width:32px; margin:0 10px;">
           </a>
           <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe">
-            <!-- Updated TryHackMe logo from TryHackMe's website -->
             <img src="https://tryhackme.com/images/logo.svg" alt="TryHackMe" style="width:32px; margin:0 10px;">
           </a>
           <a href="https://www.instagram.com/__shacker__" target="_blank" title="Instagram">
@@ -508,10 +531,10 @@
             <p>
               A project simulating ransomware behavior for educational purposes. Explore the cybersecurity programming and simulation details on LinkedIn.
             </p>
-            <a href="https://www.linkedin.com/posts/ahmed-shacker-helmi_cybersecurity-programming-ransomwaresimulation-activity-7265068897844776961-yDOr?utm_source=share&utm_medium=member_desktop" target="_blank">View Project on LinkedIn</a>
+            <a href="https://www.linkedin.com/posts/ahmed-shacker-helmi_cybersecurity-programming-ransomwaresimulation-activity-7265068897844776961-yDOr" target="_blank">View Project on LinkedIn</a>
           </div>
           <div class="project-image">
-            <a href="https://www.linkedin.com/posts/ahmed-shacker-helmi_cybersecurity-programming-ransomwaresimulation-activity-7265068897844776961-yDOr?utm_source=share&utm_medium=member_desktop" target="_blank">
+            <a href="https://www.linkedin.com/posts/ahmed-shacker-helmi_cybersecurity-programming-ransomwaresimulation-activity-7265068897844776961-yDOr" target="_blank">
               <img src="https://raw.githubusercontent.com/AS2812/Front-end/main/Personal%20Portfolio%20Website/images/malware.jpeg" alt="Malware Simulation Project">
             </a>
           </div>
@@ -548,7 +571,7 @@
             </a>
           </div>
         </div>
-        <!-- Additional project screenshots -->
+        <!-- Additional Projects -->
         <div class="item project">
           <div class="project-info">
             <h2>Additional Project Image</h2>
