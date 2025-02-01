@@ -2,356 +2,483 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My awesome portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Shacker Helmi - Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Custom CSS -->
+  <style>
+    /* ------------------------- ROOT VARIABLES ------------------------- */
+    :root {
+      --primary-color: #FF8B00; /* Fanta Orange */
+      --secondary-color: #E0E0E0; /* Light Gray */
+      --background-color: #0D0D0D; /* Fanta Black */
+      --card-background: #1A1A1A; /* Dark Gray */
+      --text-color: #FFFFFF;
+    }
+
+    /* ------------------------- RESET & GLOBAL ------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* ------------------------- NAVIGATION ------------------------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    /* ------------------------- HEADER / HERO ------------------------- */
+    header {
+      position: relative;
+      height: 80vh;
+      background: url('main.png') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--text-color);
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 13, 13, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content p {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ------------------------- SECTIONS ------------------------- */
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .card-section {
+      background-color: var(--card-background);
+      margin-bottom: 30px;
+      border-radius: 8px;
+      padding: 30px;
+    }
+
+    .card-section p {
+      line-height: 1.6;
+    }
+
+    /* Experience, Projects, Certifications, Volunteering */
+    .item {
+      margin-bottom: 25px;
+      border-bottom: 1px solid var(--secondary-color);
+      padding-bottom: 20px;
+    }
+
+    .item h2 {
+      font-size: 1.8em;
+      margin-bottom: 5px;
+    }
+
+    .item p {
+      margin: 5px 0;
+    }
+
+    /* Skills */
+    .skill-tag {
+      display: inline-block;
+      margin: 5px;
+      padding: 5px 10px;
+      border: 1px solid var(--primary-color);
+      border-radius: 20px;
+      color: var(--primary-color);
+      transition: background-color 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      background-color: var(--primary-color);
+      color: var(--background-color);
+    }
+
+    /* ------------------------- FOOTER ------------------------- */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: var(--card-background);
+      margin-top: 30px;
+    }
+
+    footer img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+
+    footer .footer-socials a {
+      margin: 0 5px;
+    }
+
+    /* ------------------------- RESPONSIVE ------------------------- */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      header {
+        height: 60vh;
+      }
+      .hero-content h1 {
+        font-size: 2.5em;
+      }
+      .hero-content p {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="site-main-wrapper">
-        <button class="hamberger">
-            <img src="./images/hamberger.svg" alt="">
-        </button>
-
-        <div class="mobile-nav">
-            <button class="times"><img src="./images/times.svg" alt=""></button>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
+  <div class="site-main-wrapper">
+    <!-- Navigation -->
+    <header>
+      <nav class="container">
+        <div class="branding">
+          <!-- You can replace this text with a logo if desired -->
+          <h2>Ahmed Shacker Helmi</h2>
         </div>
-        <header>
-            <div class="container">
-                <nav id="main-nav" class="flex items-center justify-between">
-                    <div class="left flex items-center">
-                        <div class="branding">
-                            <img src="./images/logo.svg" alt="">
-                        </div>
-                        <div>
-                            <a href="#">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#services">Services</a>
-                            <a href="#work">Work</a>
-                            <a href="#blog">Blog</a>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <button class="btn btn-primary">Contact</button>
-                    </div>
-                </nav>
-                <div class="hero flex items-center justify-between">
-                    <div class="left flex-1 flex justify-center">
-                        <img src="./images/man.png" alt="">
-                    </div>
-                    <div class="right flex-1">
-                        <h6>Johnathan Vics</h6>
-                        <h1>I’m a Creative <span>Designer</span></h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco
-                            laboris
-                            nisi ut aliquip ex ea commodo consequat</p>
-                        <div>
-                            <button class="btn btn-secondary">DOWNLOAD CV</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#skills">Skills</a>
+          <a href="#volunteering">Volunteering</a>
+        </div>
+      </nav>
+      <div class="hero-content container">
+        <h1>Ahmed Shacker Helmi</h1>
+        <p>Cybersecurity Student at Alexandria University | Data Analyst Specialist Trainee</p>
+        <p>Alexandria, Egypt</p>
+      </div>
+    </header>
 
-        <section id="about" class="about">
-            <div class="container flex items-center about-inner-wrap">
-                <div class="flex-1">
-                    <img class="about-me-img" src="./images/man-2.png" alt="">
-                </div>
-                <div class="flex-1 right">
-                    <h1>About <span>Me</span></h1>
-                    <h3>Hello! i’m Johnathan Vics.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut
-                        labore et
-                        dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <!-- About Section -->
+    <section id="about" class="section card-section about">
+      <div class="container">
+        <h1 class="section-heading">About Me</h1>
+        <p>I am a Computer Science student at Alexandria University, specializing in Cybersecurity. My expertise spans both offensive and defensive security, with hands-on experience in ethical hacking, network security, and cryptography.</p>
+        <p>I have completed certifications from TryHackMe, Google Cybersecurity, and the SOC roadmap, and am actively pursuing the Google Cybersecurity Professional Certificate on Coursera. My skills include vulnerability assessment, penetration testing, and threat analysis, which I’ve developed through real-world projects and internships.</p>
+        <p>In addition to cybersecurity, I have strong data analysis capabilities using Python, SQL, Tableau, and have earned certifications from SAS and CIB. I also have experience in full-stack development, currently enhancing my skills through HackerRank to better support my freelance work in both cybersecurity and web development.</p>
+        <p>My internship experiences at Offense Crest, ITI, and ITIDA have allowed me to apply my knowledge in real-world scenarios, solving complex security challenges. I'm constantly learning and adapting to new technologies to stay on the cutting edge of cybersecurity.</p>
+        <p>I’m actively seeking freelance opportunities to leverage my expertise in cybersecurity and full-stack development.</p>
+      </div>
+    </section>
 
-                        Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat</p>
-                    <div class="social">
-                        <a href="#"><img src="./images/website.svg" alt=""></a>
-                        <a href="https://www.facebook.com/codersgyan"><img src="./images/facebook.svg" alt=""></a>
-                        <a href="https://twitter.com/CoderGyan"> <img src="./images/twitter.svg" alt=""></a>
-                        <a href="#"> <img src="./images/pintrest.svg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="services" class="services">
-            <div class="container">
-                <h1 class="section-heading"><span>Our </span>Services</h1>
-                <p>We provide high standar clean website for your business solutions</p>
-                <div class="card-wrapper">
-                    <div class="card">
-                        <img src="./images/brush.svg" alt="">
-                        <h2>Graphic Design</h2>
-                        <p>There are many variations of passages of but the majority have suffered alteration in some
-                            form.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <img src="./images/code.svg" alt="">
-                        <h2>Graphic Design</h2>
-                        <p>There are many variations of passages of but the majority have suffered alteration in some
-                            form.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <img src="./images/bag.svg" alt="">
-                        <h2>Graphic Design</h2>
-                        <p>There are many variations of passages of but the majority have suffered alteration in some
-                            form.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <img src="./images/desktop.svg" alt="">
-                        <h2>Graphic Design</h2>
-                        <p>There are many variations of passages of but the majority have suffered alteration in some
-                            form.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <img src="./images/media.svg" alt="">
-                        <h2>Graphic Design</h2>
-                        <p>There are many variations of passages of but the majority have suffered alteration in some
-                            form.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <img src="./images/phone.svg" alt="">
-                        <h2>Graphic Design</h2>
-                        <p>There are many variations of passages of but the majority have suffered alteration in some
-                            form.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="freelancer">
-            <h1>I Am Available For Freelancer.</h1>
-            <p>We provide high standar clean website for your business solutions</p>
-            <button class="btn btn-primary">Download CV</button>
-        </section>
-        <section class="reviews">
-            <div class="container">
-                <h1 class="section-heading"><span>Our</span> Client</h1>
-                <p>We provide high standar clean website for your business solutions</p>
-                <div class="slider">
-                    <div class="slide">
-                        <img src="./images/lady.png" alt="">
-                        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum"</p>
-                        <span>- John Doel, Company ABC</span>
-                    </div>
-                    <div class="slide">
-                        <img src="./images/lady.png" alt="">
-                        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum"</p>
-                        <span>- John Doel, Company ABC</span>
-                    </div>
-                    <div class="slide">
-                        <img src="./images/lady.png" alt="">
-                        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum"</p>
-                        <span>- John Doel, Company ABC</span>
-                    </div>
-                    <div class="slide">
-                        <img src="./images/lady.png" alt="">
-                        <p>"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum"</p>
-                        <span>- John Doel, Company ABC</span>
-                    </div>
-                </div>
-                <div class="slider-dots"></div>
-            </div>
-        </section>
+    <!-- Experience Section -->
+    <section id="experience" class="section card-section experience">
+      <div class="container">
+        <h1 class="section-heading">Professional Experience</h1>
+        <div class="item">
+          <h2>Data Analyst Specialist Trainee</h2>
+          <p><strong>Digital Egypt Pioneers Initiative - DEPI</strong> | Sep 2024 - Present · Alexandria, Egypt · Hybrid</p>
+          <p>Analyzing large datasets using Python, SQL, and Tableau. Collaborating with teams to identify trends, improve data models, and enhance customer satisfaction through data-driven insights.</p>
+        </div>
+        <div class="item">
+          <h2>Internship Trainee</h2>
+          <p><strong>Information Technology Institute (ITI)</strong> | Sep 2024 - Oct 2024 · Alexandria, Egypt · Remote</p>
+          <p>Completed comprehensive training in web development fundamentals including Scratch, CSS, HTML, and CS50. Developed interactive projects and gained strong problem-solving skills.</p>
+        </div>
+        <div class="item">
+          <h2>Intern</h2>
+          <p><strong>Offense Crest</strong> | Aug 2024 - Oct 2024 · Alexandria, Egypt · Hybrid</p>
+          <p>Specialized in Cybersecurity, C/C++, Assembly, and networking. Implemented AES encryption in Assembly on Linux and gained expertise in system-level programming.</p>
+        </div>
+        <div class="item">
+          <h2>Internship Trainee</h2>
+          <p><strong>Information Technology Industry Development Agency (ITIDA)</strong> | Sep 2024 · Alexandria, Egypt · On-site</p>
+          <p>Developed skills in innovation, entrepreneurship, and creative problem-solving. Completed certifications focused on technology leadership and collaboration.</p>
+        </div>
+        <div class="item">
+          <h2>Internship Trainee</h2>
+          <p><strong>CIB Egypt</strong> | Aug 2024 - Sep 2024 · Alexandria, Egypt · Remote</p>
+          <p>Focused on Data Literacy and Digital Transformation. Completed CIB Summer Bootcamp on leadership and earned certifications in business technology integration.</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="work" class="work">
-            <div class="container">
-                <h1 class="section-heading"><span>Our</span> Works</h1>
-                <p>We provide high standar clean website for your business solutions</p>
+    <!-- Projects Section -->
+    <section id="projects" class="section card-section projects">
+      <div class="container">
+        <h1 class="section-heading">Projects</h1>
+        <div class="item">
+          <h2>Comprehensive Retail Analytics</h2>
+          <p><em>Dec 2024</em></p>
+          <p>Performed in-depth exploratory data analysis on retail sales data, identifying key trends in product categories, regional performance, and customer segmentation. Used Python and Jupyter for data visualization and statistical analysis.</p>
+          <div>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Jupyter</span>
+            <span class="skill-tag">Data Visualization</span>
+          </div>
+        </div>
+        <div class="item">
+          <h2>RansomSafe: AES Encryption Tool</h2>
+          <p><em>Oct 2024 - Nov 2024</em></p>
+          <p>Developed a ransomware simulation project combining Assembly, C, and Python for secure file handling. Implemented AES encryption using OpenSSL and created a Python GUI for demonstration purposes.</p>
+          <div>
+            <span class="skill-tag">Assembly</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">AES</span>
+            <span class="skill-tag">GUI</span>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Customer Data Analysis</h2>
+          <p><em>Sep 2024</em></p>
+          <p>Created a Shiny application for customer behavior analysis featuring data visualization, k-means clustering, and association rule mining. Implemented CSV file handling and interactive visualizations.</p>
+          <div>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">Data Mining</span>
+            <span class="skill-tag">Clustering</span>
+            <span class="skill-tag">Visualization</span>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Front-End Projects</h2>
+          <p><em>Aug 2024</em></p>
+          <p>Developed responsive web applications including Twitter and YouTube clones, focusing on clean design and user experience.</p>
+          <div>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Responsive Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="overlay">
-                            <span>Category</span>
-                            <a href="#">Web development</a>
-                        </div>
-                        <img src="./images/ph-1.png" alt="">
-                    </div>
-                    <div class="card">
-                        <div class="overlay">
-                            <span>Category</span>
-                            <a href="#">Web development</a>
-                        </div>
-                        <img src="./images/ph-1.png" alt="">
-                    </div>
-                    <div class="card">
-                        <div class="overlay">
-                            <span>Category</span>
-                            <a href="#">Web development</a>
-                        </div>
-                        <img src="./images/ph-1.png" alt="">
-                    </div>
-                    <div class="card">
-                        <div class="overlay">
-                            <span>Category</span>
-                            <a href="#">Web development</a>
-                        </div>
-                        <img src="./images/ph-1.png" alt="">
-                    </div>
-                    <div class="card">
-                        <div class="overlay">
-                            <span>Category</span>
-                            <a href="#">Web development</a>
-                        </div>
-                        <img src="./images/ph-1.png" alt="">
-                    </div>
-                    <div class="card">
-                        <div class="overlay">
-                            <span>Category</span>
-                            <a href="#">Web development</a>
-                        </div>
-                        <img src="./images/ph-1.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="blog" class="blog">
-            <div class="container">
-                <h1 class="section-heading"><span>Our</span> Blog</h1>
-                <p>We provide high standar clean website for your business solutions</p>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section card-section certifications">
+      <div class="container">
+        <h1 class="section-heading">Certifications</h1>
+        <div class="item">
+          <h2>Pre Security Certification</h2>
+          <p><strong>TryHackMe · Jan 2025</strong></p>
+          <p>Successfully completed the Pre Security learning path, gaining foundational skills in cyber security, networking, web fundamentals, Linux, and Windows.</p>
+          <p><em>Credential ID: THM-RBYGX8KK2C</em></p>
+        </div>
+        <div class="item">
+          <h2>Python (Basic) Certification</h2>
+          <p><strong>HackerRank · Jan 2025</strong></p>
+          <p>Demonstrated proficiency in core Python concepts like data types, control flow, strings, collections, and OOP.</p>
+          <p><em>Credential ID: 699e0c8edce4</em></p>
+        </div>
+        <div class="item">
+          <h2>SQL (Basic) Certification</h2>
+          <p><strong>HackerRank · Jan 2025</strong></p>
+          <p>Demonstrated proficiency in writing simple queries, managing relationships, and utilizing aggregators.</p>
+          <p><em>Credential ID: f1932d139c53</em></p>
+        </div>
+        <div class="item">
+          <h2>Connect and Protect: Networks and Network Security</h2>
+          <p><strong>Google Career Certificates · Jan 2025</strong></p>
+          <p>Completed with 98.81% grade, covering network architecture, TCP/IP, security hardening, and intrusion prevention.</p>
+          <p><em>Credential ID: GP3LCWLDY17W</em></p>
+        </div>
+        <div class="item">
+          <h2>Play It Safe: Manage Security Risks</h2>
+          <p><strong>Google Career Certificates · Jan 2025</strong></p>
+          <p>Completed with 97.32% grade, mastering risk management, NIST frameworks, security audits, and incident response.</p>
+          <p><em>Credential ID: LHF1CQWEU7Q3</em></p>
+        </div>
+        <div class="item">
+          <h2>Foundations of Cybersecurity</h2>
+          <p><strong>Google Career Certificates · Dec 2024</strong></p>
+          <p>Completed with 98.15% grade, covering cybersecurity fundamentals, NIST frameworks, and security tools.</p>
+          <p><em>Credential ID: DNZG7XURSSZB</em></p>
+        </div>
+        <div class="item">
+          <h2>Introduction to Security Principles in Cloud Computing</h2>
+          <p><strong>Google Cloud · Oct 2024</strong></p>
+          <p>Achieved 100% grade, mastering cloud security fundamentals and digital transformation concepts.</p>
+          <p><em>Credential ID: 07FPZNPI8WMH</em></p>
+        </div>
+        <div class="item">
+          <h2>Data Literacy Certifications</h2>
+          <p><strong>SAS · Aug 2024</strong></p>
+          <p>Completed Data Literacy Essentials and Data Literacy in Practice certifications.</p>
+        </div>
+        <div class="item">
+          <h2>Java (Basic) Certification</h2>
+          <p><strong>HackerRank · Jul 2024</strong></p>
+          <p>Successfully passed the Java certification, demonstrating proficiency in core Java programming concepts.</p>
+          <p><em>Credential ID: 16134779d953</em></p>
+        </div>
+      </div>
+    </section>
 
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="img-wrapper">
-                            <img src="./images/article-ph-1.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <a href="#">
-                                <h1>Occusamus et iusto odio</h1>
-                            </a>
-                            <span>May 12, 2017</span>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt
-                                mollit anim id est laborum.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-wrapper">
-                            <img src="./images/article-ph-1.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <a href="#">
-                                <h1>Occusamus et iusto odio</h1>
-                            </a>
-                            <span>May 12, 2017</span>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt
-                                mollit anim id est laborum.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="img-wrapper">
-                            <img src="./images/article-ph-1.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <a href="#">
-                                <h1>Occusamus et iusto odio</h1>
-                            </a>
-                            <span>May 12, 2017</span>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                nulla
-                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                deserunt
-                                mollit anim id est laborum.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="contact">
-            <div class="container">
-                <h1 class="section-heading">Contact <span>Us</span></h1>
-                <p>We provide high standar clean website for your business solutions</p>
-                <div class="card-wrapper">
-                    <div class="card">
-                        <img src="./images/phone-2.svg" alt="">
-                        <h1>Call Us On</h1>
-                        <h6>+985 123 7856</h6>
-                    </div>
-                    <div class="card">
-                        <img src="./images/msg.svg" alt="">
-                        <h1>Email Us At</h1>
-                        <h6>support@companyname.com</h6>
-                    </div>
-                    <div class="card">
-                        <img src="./images/map.svg" alt="">
-                        <h1>Visit Office</h1>
-                        <h6>99 S.t Jomblo Park Pekanbaru 28292. Indonesia</h6>
-                    </div>
+    <!-- Skills Section -->
+    <section id="skills" class="section card-section skills">
+      <div class="container">
+        <h1 class="section-heading">Skills</h1>
+        <div class="item">
+          <h2>Programming Languages</h2>
+          <div>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">Assembly</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Cybersecurity</h2>
+          <div>
+            <span class="skill-tag">Network Security</span>
+            <span class="skill-tag">Cryptography</span>
+            <span class="skill-tag">Malware Analysis</span>
+            <span class="skill-tag">Security Audits</span>
+            <span class="skill-tag">NIST Framework</span>
+            <span class="skill-tag">Incident Response</span>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Data Analysis</h2>
+          <div>
+            <span class="skill-tag">Data Cleaning</span>
+            <span class="skill-tag">Statistical Analysis</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Jupyter</span>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Tools & Technologies</h2>
+          <div>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">TCP/IP</span>
+            <span class="skill-tag">Cloud Technologies</span>
+            <span class="skill-tag">GUI Development</span>
+          </div>
+        </div>
+        <div class="item">
+          <h2>Languages</h2>
+          <div>
+            <span class="skill-tag">Arabic</span>
+            <span class="skill-tag">English</span>
+            <span class="skill-tag">French (DELF B1)</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                </div>
+    <!-- Volunteering Section -->
+    <section id="volunteering" class="section card-section volunteering">
+      <div class="container">
+        <h1 class="section-heading">Volunteering</h1>
+        <div class="item">
+          <h2>Volunteer</h2>
+          <p><strong>IEEE AlexCSC - Activities Committee</strong> | Feb 2024 - Sep 2024 · Alexandria, Egypt</p>
+          <p>Active member of the IEEE Computer Society Student Chapter at Alexandria University. Received an Outstanding Volunteer certificate for contributions to STEM education and technology promotion. Organized technical workshops and community outreach events.</p>
+          <div>
+            <span class="skill-tag">Event Planning</span>
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Community Outreach</span>
+            <span class="skill-tag">STEM Education</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <form action="">
-                    <div class="input-wrap">
-                        <input type="text" placeholder="Your Name *">
-                        <input type="email" placeholder="Your Email *">
-                    </div>
-                    <div class="input-wrap-2">
-                        <input type="text" placeholder="Your Subject...">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
-                    </div>
-                    <div class="btn-wrapper">
-                        <button class="btn btn-primary">Send Message</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <footer>
-            <img class="footer-logo" src="./images/logo-2.svg" alt="">
-            <div class="footer-socials">
-                <a href="#"><img src="./images/website.svg" alt=""></a>
-                <a href="https://www.facebook.com/codersgyan"><img src="./images/facebook.svg" alt=""></a>
-                <a href="https://twitter.com/CoderGyan"> <img src="./images/twitter.svg" alt=""></a>
-                <a href="#"> <img src="./images/pintrest.svg" alt=""></a>
-                <a href="https://www.instagram.com/codersgyan/"> <img src="./images/instagram.svg" alt=""></a>
-            </div>
-            <div class="copyright">
-                Copyright 2020 © Coder's Gyan
-            </div>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer>
+      <img src="./images/logo-2.svg" alt="Logo">
+      <div class="footer-socials">
+        <a href="#"><img src="./images/website.svg" alt=""></a>
+        <a href="https://www.facebook.com/codersgyan"><img src="./images/facebook.svg" alt=""></a>
+        <a href="https://twitter.com/CoderGyan"><img src="./images/twitter.svg" alt=""></a>
+        <a href="#"><img src="./images/pintrest.svg" alt=""></a>
+        <a href="https://www.instagram.com/codersgyan/"><img src="./images/instagram.svg" alt=""></a>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Ahmed Shacker Helmi. All Rights Reserved.
+      </div>
+    </footer>
+  </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./js/app.js"></script>
+  <!-- Slick Carousel JS -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    // Initialize slick slider if needed (for any slider components)
+    $(document).ready(function () {
+      $('.slider').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+    });
+  </script>
 </body>
 
 </html>
