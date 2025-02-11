@@ -10,10 +10,10 @@
   <style>
     /* ------------------------- ROOT VARIABLES ------------------------- */
     :root {
-      --primary-color: #FF8B00; /* Fanta Orange */
-      --secondary-color: #E0E0E0; /* Light Gray */
-      --background-color: #0D0D0D; /* Fanta Black */
-      --card-background: #1A1A1A; /* Dark Gray */
+      --primary-color: #FF8B00;
+      --secondary-color: #E0E0E0;
+      --background-color: #0D0D0D;
+      --card-background: #1A1A1A;
       --text-color: #FFFFFF;
       --nav-height: 70px;
     }
@@ -29,19 +29,16 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
     }
-
     a {
       color: inherit;
       text-decoration: none;
     }
-
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -55,39 +52,33 @@
       top: 0;
       left: 0;
       background: rgba(13, 13, 13, 0.95);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
       z-index: 1000;
     }
-
     nav .nav-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 0;
     }
-
     .branding {
       display: flex;
       align-items: center;
       gap: 15px;
     }
-
     .branding img {
       height: 40px;
       width: auto;
     }
-
     .branding h2 {
       font-size: 1.5em;
       color: var(--primary-color);
     }
-
     nav .nav-links a {
       margin: 0 15px;
       font-weight: 600;
       transition: color 0.3s ease;
     }
-
     nav .nav-links a:hover {
       color: var(--primary-color);
     }
@@ -104,7 +95,6 @@
       text-align: center;
       padding-top: var(--nav-height);
     }
-
     header.hero::before {
       content: "";
       position: absolute;
@@ -115,23 +105,20 @@
       background: rgba(13, 13, 13, 0.6);
       z-index: 1;
     }
-
     .hero-content {
       position: relative;
       z-index: 2;
     }
-
     .hero-content h1 {
       font-size: 3em;
       margin-bottom: 10px;
       color: var(--primary-color);
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
-
     .hero-content p {
       font-size: 1.2em;
       margin-bottom: 5px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
     /* ------------------------- BUTTONS ------------------------- */
@@ -145,7 +132,6 @@
       display: inline-block;
       transition: background-color 0.3s ease;
     }
-
     .btn-contact:hover {
       background-color: #e07a00;
     }
@@ -154,37 +140,31 @@
     .section {
       padding: 60px 0;
     }
-
     .section-heading {
       text-align: center;
       font-size: 2.5em;
       margin-bottom: 20px;
       color: var(--primary-color);
     }
-
     .card-section {
       background-color: var(--card-background);
       margin-bottom: 30px;
       border-radius: 8px;
       padding: 30px;
     }
-
     .card-section p {
       margin-bottom: 15px;
       line-height: 1.6;
     }
-
     .item {
       margin-bottom: 25px;
       border-bottom: 1px solid var(--secondary-color);
       padding-bottom: 20px;
     }
-
     .item h2 {
       font-size: 1.8em;
       margin-bottom: 5px;
     }
-
     .item p {
       margin: 5px 0;
     }
@@ -199,7 +179,6 @@
       color: var(--primary-color);
       transition: background-color 0.3s ease;
     }
-
     .skill-tag:hover {
       background-color: var(--primary-color);
       color: var(--background-color);
@@ -213,17 +192,14 @@
       align-items: center;
       margin-bottom: 20px;
     }
-
     .project img {
       max-width: 100%;
       border-radius: 8px;
     }
-
     .project-info {
       flex: 1;
       min-width: 280px;
     }
-
     .project-info a {
       color: var(--primary-color);
       font-weight: 600;
@@ -238,7 +214,6 @@
       gap: 20px;
       justify-content: center;
     }
-
     .service-item {
       background-color: var(--card-background);
       border-radius: 8px;
@@ -248,16 +223,13 @@
       max-width: 300px;
       transition: transform 0.3s ease;
     }
-
     .service-item:hover {
       transform: translateY(-5px);
     }
-
     .service-item img {
       width: 60px;
       margin-bottom: 10px;
     }
-
     .service-item h3 {
       font-size: 1.5em;
       margin-bottom: 10px;
@@ -271,7 +243,6 @@
       gap: 20px;
       justify-content: center;
     }
-
     .cert-item {
       background-color: var(--card-background);
       border-radius: 8px;
@@ -279,21 +250,51 @@
       max-width: 300px;
       flex: 1 1 300px;
     }
-
-    .cert-item img {
-      width: 50px;
-      margin-bottom: 10px;
-    }
-
     .cert-item h3 {
       font-size: 1.3em;
       margin-bottom: 5px;
       color: var(--primary-color);
     }
-
     .cert-item p {
       font-size: 0.9em;
       margin: 5px 0;
+    }
+
+    /* ------------------------- CONTACT FORM ENHANCEMENTS ------------------------- */
+    .contact-form {
+      background: var(--card-background);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .contact-form .input-group {
+      margin-bottom: 15px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--secondary-color);
+      border-radius: 4px;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    .contact-form button {
+      background-color: var(--primary-color);
+      color: var(--background-color);
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .contact-form button:hover {
+      background-color: #e07a00;
     }
 
     /* ------------------------- FOOTER ------------------------- */
@@ -303,23 +304,19 @@
       background-color: var(--card-background);
       margin-top: 30px;
     }
-
     footer img.logo {
       width: 100px;
       margin-bottom: 10px;
     }
-
     footer .footer-socials a {
       margin: 0 5px;
       display: inline-block;
       transition: opacity 0.3s ease;
     }
-
     footer .footer-socials a img {
       width: 32px;
       height: 32px;
     }
-
     footer .footer-socials a:hover {
       opacity: 0.7;
     }
@@ -582,15 +579,13 @@
       </div>
     </section>
 
-    <!-- Licenses & Certifications Section -->
+    <!-- Licenses & Certifications Section (Text Only) -->
     <section id="certifications" class="section card-section certifications">
       <div class="container">
         <h1 class="section-heading">Licenses & Certifications</h1>
         <div class="certifications-grid">
           <!-- Certification 1: Accenture Simulation -->
           <div class="cert-item">
-            <!-- Replace the placeholder with your actual Forage/Accenture logo URL if available -->
-            <img src="https://via.placeholder.com/50?text=Forage" alt="Forage Logo">
             <h3>Accenture Data Analytics & Visualization Job Simulation</h3>
             <p><strong>Issued:</strong> Feb 2025</p>
             <p><strong>Credential ID:</strong> MrstNHkYTpwGAnEAZ</p>
@@ -599,7 +594,6 @@
           </div>
           <!-- Certification 2: TryHackMe Pre Security -->
           <div class="cert-item">
-            <img src="https://via.placeholder.com/50?text=TryHackMe" alt="TryHackMe Logo">
             <h3>Certified in Pre Security</h3>
             <p><strong>Issued:</strong> Jan 2025</p>
             <p><strong>Credential ID:</strong> THM-RBYGX8KK2C</p>
@@ -608,7 +602,6 @@
           </div>
           <!-- Certification 3: HackerRank Python -->
           <div class="cert-item">
-            <img src="https://via.placeholder.com/50?text=HackerRank" alt="HackerRank Logo">
             <h3>Python (Basic) Certification</h3>
             <p><strong>Issued:</strong> Jan 2025</p>
             <p><strong>Credential ID:</strong> 699e0c8edce4</p>
@@ -617,7 +610,6 @@
           </div>
           <!-- Certification 4: HackerRank SQL -->
           <div class="cert-item">
-            <img src="https://via.placeholder.com/50?text=HackerRank" alt="HackerRank Logo">
             <h3>SQL (Basic) Certification</h3>
             <p><strong>Issued:</strong> Jan 2025</p>
             <p><strong>Credential ID:</strong> f1932d139c53</p>
@@ -626,7 +618,6 @@
           </div>
           <!-- Certification 5: Google Networks -->
           <div class="cert-item">
-            <img src="https://via.placeholder.com/50?text=Google" alt="Google Career Certificates Logo">
             <h3>Connect and Protect: Networks & Security</h3>
             <p><strong>Issued:</strong> Jan 2025</p>
             <p><strong>Credential ID:</strong> GP3LCWLDY17W</p>
@@ -635,7 +626,6 @@
           </div>
           <!-- Certification 6: Google Play It Safe -->
           <div class="cert-item">
-            <img src="https://via.placeholder.com/50?text=Google" alt="Google Career Certificates Logo">
             <h3>Play It Safe: Manage Security Risks</h3>
             <p><strong>Issued:</strong> Jan 2025</p>
             <p><strong>Credential ID:</strong> LHF1CQWEU7Q3</p>
@@ -644,7 +634,6 @@
           </div>
           <!-- Certification 7: Google Foundations -->
           <div class="cert-item">
-            <img src="https://via.placeholder.com/50?text=Google" alt="Google Career Certificates Logo">
             <h3>Foundations of Cybersecurity</h3>
             <p><strong>Issued:</strong> Dec 2024</p>
             <p><strong>Credential ID:</strong> DNZG7XURSSZB</p>
@@ -653,7 +642,6 @@
           </div>
           <!-- Certification 8: Google Cloud Security -->
           <div class="cert-item">
-            <img src="https://via.placeholder.com/50?text=Google" alt="Google Career Certificates Logo">
             <h3>Intro to Security Principles in Cloud Computing</h3>
             <p><strong>Issued:</strong> Oct 2024</p>
             <p><strong>Credential ID:</strong> 07FPZNPI8WMH</p>
@@ -662,7 +650,6 @@
           </div>
           <!-- Certification 9: SAS Data Literacy -->
           <div class="cert-item">
-            <img src="https://via.placeholder.com/50?text=SAS" alt="SAS Logo">
             <h3>Data Literacy Essentials</h3>
             <p><strong>Issued:</strong> Aug 2024</p>
             <p>Developed a strong foundation in data literacy, essential for effective data analysis.</p>
@@ -670,7 +657,6 @@
           </div>
           <!-- Certification 10: HackerRank Java -->
           <div class="cert-item">
-            <img src="https://via.placeholder.com/50?text=HackerRank" alt="HackerRank Logo">
             <h3>Java (Basic) Certification</h3>
             <p><strong>Issued:</strong> Jul 2024</p>
             <p><strong>Credential ID:</strong> 16134779d953</p>
@@ -744,7 +730,7 @@
       <div class="container">
         <h1 class="section-heading">Education</h1>
         <div class="item" style="overflow: auto;">
-          <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="Alexandria University Logo" style="width:80px; float:left; margin-right:20px;">
+          <img src="./images/alexandria_university_logo.jpg" alt="Alexandria University Logo" style="width:80px; float:left; margin-right:20px;">
           <h2>Alexandria University</h2>
           <p><strong>Bachelor's degree, Computer Science</strong> | Sep 2023 - Jul 2027</p>
           <p>Grade: CGPA 3.6336</p>
@@ -778,7 +764,8 @@
     <section id="contact" class="section card-section contact">
       <div class="container">
         <h1 class="section-heading">Contact Me</h1>
-        <div class="contact-info">
+        <p style="text-align:center; margin-bottom:20px;">We'd love to hear from you! Please fill out the form below and I will get back to you as soon as possible.</p>
+        <div class="contact-info" style="text-align: center;">
           <p><strong><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" style="width:20px; vertical-align:middle;"> Phone:</strong> <a href="tel:+201200866039">+20 1200 866039</a></p>
           <p><strong><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" style="width:20px; vertical-align:middle;"> Email:</strong> <a href="mailto:ahmedchacker@gmail.com">ahmedchacker@gmail.com</a></p>
           <p><strong><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:20px; vertical-align:middle;"> LinkedIn:</strong> <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank">linkedin.com/in/ahmed-shacker-helmi</a></p>
