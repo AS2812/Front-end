@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmed Shacker Helmi - Data Analytics & Cybersecurity Portfolio</title>
+  <title>Ahmed Shacker Helmi - Portfolio</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
@@ -17,12 +17,10 @@
       --text-color: #FFFFFF;
       --nav-height: 70px;
     }
-
     /* Prevent scrolling anchors from hiding content behind fixed nav */
     html {
       scroll-padding-top: var(--nav-height);
     }
-
     /* ------------------------- RESET & GLOBAL ------------------------- */
     * {
       margin: 0;
@@ -44,7 +42,6 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-
     /* ------------------------- NAVIGATION ------------------------- */
     header nav {
       width: 100%;
@@ -75,69 +72,15 @@
       color: var(--primary-color);
     }
     nav .nav-links a {
-      margin: 0 15px;
+      margin: 0 10px;
       font-weight: 600;
       transition: color 0.3s ease;
     }
     nav .nav-links a:hover {
       color: var(--primary-color);
     }
-
-    /* ------------------------- HERO / HEADER ------------------------- */
-    header.hero {
-      position: relative;
-      min-height: calc(80vh + var(--nav-height));
-      background: url('./images/main.png') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding-top: var(--nav-height);
-    }
-    header.hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(13, 13, 13, 0.6);
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
-    .hero-content h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-      color: var(--primary-color);
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-    .hero-content p {
-      font-size: 1.2em;
-      margin-bottom: 5px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    }
-
-    /* ------------------------- BUTTONS ------------------------- */
-    .btn-contact {
-      background-color: var(--primary-color);
-      color: var(--background-color);
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-weight: 600;
-      margin-top: 20px;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-    .btn-contact:hover {
-      background-color: #e07a00;
-    }
-
     /* ------------------------- SECTIONS ------------------------- */
-    .section {
+    section {
       padding: 60px 0;
     }
     .section-heading {
@@ -165,10 +108,66 @@
       font-size: 1.8em;
       margin-bottom: 5px;
     }
-    .item p {
-      margin: 5px 0;
+    /* ------------------------- PROFILE (HERO) SECTION ------------------------- */
+    /* Profile section uses a hero style with background image */
+    header.hero {
+      position: relative;
+      min-height: calc(80vh + var(--nav-height));
+      background: url('./images/main.png') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: var(--nav-height);
     }
-
+    header.hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 13, 13, 0.6);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content img.profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary-color);
+      margin-bottom: 20px;
+    }
+    .hero-content h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .hero-content p {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    /* ------------------------- BUTTONS ------------------------- */
+    .btn-contact {
+      background-color: var(--primary-color);
+      color: var(--background-color);
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-top: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .btn-contact:hover {
+      background-color: #e07a00;
+    }
     /* ------------------------- SKILL TAGS ------------------------- */
     .skill-tag {
       display: inline-block;
@@ -183,7 +182,6 @@
       background-color: var(--primary-color);
       color: var(--background-color);
     }
-
     /* ------------------------- PROJECTS ------------------------- */
     .project {
       display: flex;
@@ -206,7 +204,6 @@
       display: inline-block;
       margin-top: 10px;
     }
-
     /* ------------------------- SERVICES ------------------------- */
     .services-grid {
       display: flex;
@@ -235,32 +232,7 @@
       margin-bottom: 10px;
       color: var(--primary-color);
     }
-
-    /* ------------------------- CERTIFICATIONS ------------------------- */
-    .certifications-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .cert-item {
-      background-color: var(--card-background);
-      border-radius: 8px;
-      padding: 20px;
-      max-width: 300px;
-      flex: 1 1 300px;
-    }
-    .cert-item h3 {
-      font-size: 1.3em;
-      margin-bottom: 5px;
-      color: var(--primary-color);
-    }
-    .cert-item p {
-      font-size: 0.9em;
-      margin: 5px 0;
-    }
-
-    /* ------------------------- CONTACT FORM ENHANCEMENTS ------------------------- */
+    /* ------------------------- CONTACT FORM ------------------------- */
     .contact-form {
       background: var(--card-background);
       border-radius: 8px;
@@ -296,7 +268,6 @@
     .contact-form button:hover {
       background-color: #e07a00;
     }
-
     /* ------------------------- FOOTER ------------------------- */
     footer {
       text-align: center;
@@ -320,7 +291,6 @@
     footer .footer-socials a:hover {
       opacity: 0.7;
     }
-
     /* ------------------------- RESPONSIVE ------------------------- */
     @media (max-width: 768px) {
       header.hero {
@@ -338,7 +308,7 @@
       .project {
         flex-direction: column;
       }
-      .services-grid, .certifications-grid {
+      .services-grid {
         flex-direction: column;
         align-items: center;
       }
@@ -352,323 +322,92 @@
       <nav>
         <div class="container nav-inner">
           <div class="branding">
-            <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="Logo">
+            <!-- Use your profile image as the logo -->
+            <img src="./images/ahmed-profile.jpg" alt="Profile Logo">
             <h2>Ahmed Shacker Helmi</h2>
           </div>
           <div class="nav-links">
+            <a href="#profile">Profile</a>
             <a href="#about">About</a>
-            <a href="#collaboration">Collaboration</a>
-            <a href="#services">Services</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#skills">Skills</a>
+            <a href="#mystory">My Story</a>
+            <a href="#strengths">Key Strengths</a>
             <a href="#education">Education</a>
-            <a href="#volunteering">Volunteering</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#review">Review</a>
             <a href="#contact">Contact</a>
           </div>
         </div>
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding-top: 100px;">
+    <!-- 1. Profile Section (Title, Job & Name) -->
+    <section id="profile" class="hero">
       <div class="hero-content container">
-        <h1>Ahmed Shacker Helmi</h1>
-        <p>Cybersecurity Student | Data Analytics Specialist Trainee</p>
-        <p>Alexandria, Egypt</p>
+        <img src="./images/ahmed-profile.jpg" alt="Ahmed Profile" class="profile">
+        <h1>Ahmed Shacker Helmi <small>(He/Him)</small></h1>
+        <p>Volunteer at HackerRank & Full-Stack Technical Team | Intern in DEPI Data Analytics Training</p>
+        <p>Graduate of College Saint-Marc, Alexandria | Cybersecurity Student at Alexandria University</p>
+        <p><strong>Digital Egypt Pioneers Initiative - DEPI</strong></p>
+        <p><strong>Alexandria University</strong> • Alexandria, Egypt</p>
+        <p>500+ Connections • Open to Opportunities</p>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section card-section about">
+    <!-- 2. About Me -->
+    <section id="about" class="section card-section">
       <div class="container">
         <h1 class="section-heading">About Me</h1>
         <p>
-          I am a dedicated Computer Science student specializing in Cybersecurity and Data Analytics. I transform complex data into actionable insights and secure systems through robust cybersecurity practices. My hands-on experience with DEPI projects, simulation roles (e.g., with Accenture), and academic pursuits has equipped me to drive data-informed decision-making.
+          I'm a highly motivated Computer Science student at Alexandria University specializing in Cybersecurity. I thrive on transforming complex challenges into innovative solutions—whether through ethical hacking, data analytics, or full-stack development.
         </p>
-        <div class="social" style="text-align: center; margin-top: 20px;">
-          <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn">
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:32px; margin:0 10px;">
-          </a>
-          <a href="https://github.com/AS2812" target="_blank" title="GitHub">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width:32px; margin:0 10px;">
-          </a>
-          <a href="https://tryhackme.com/r/p/ahmedchacker" target="_blank" title="TryHackMe">
-            <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="TryHackMe" style="width:32px; margin:0 10px;">
-          </a>
-          <a href="https://www.instagram.com/__shacker__" target="_blank" title="Instagram">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:32px; margin:0 10px;">
-          </a>
-        </div>
       </div>
     </section>
 
-    <!-- Collaboration Section -->
-    <section id="collaboration" class="section card-section collaboration">
+    <!-- 3. My Story (Hook / Storytelling Overview) -->
+    <section id="mystory" class="section card-section">
       <div class="container">
-        <h1 class="section-heading">Let's Collaborate</h1>
+        <h1 class="section-heading">My Story</h1>
         <p>
-          Ready to leverage data analytics for transformative insights? I offer comprehensive analytics solutions—from data cleaning to interactive dashboards—that empower stakeholders to drive growth.
+          From my early days tinkering with code to my immersive experiences at DEPI and various internships, my journey is fueled by passion and continuous learning. I believe every challenge is an opportunity to innovate and every dataset tells a story waiting to be uncovered.
         </p>
-        <p>
-          With expertise in Power BI, Python, R, and SQL (plus hands-on DEPI and simulation experience), I deliver strategies that turn raw data into actionable business intelligence.
-        </p>
-        <a class="btn-contact" href="#contact">Get in Touch</a>
       </div>
     </section>
 
-    <!-- Services Section with Pricing -->
-    <section id="services" class="section card-section services">
+    <!-- 4. Key Strengths -->
+    <section id="strengths" class="section card-section">
       <div class="container">
-        <h1 class="section-heading">Services & Pricing</h1>
-        <div class="services-grid">
-          <!-- Service 1: Data Cleaning & Preprocessing -->
-          <div class="service-item">
-            <img src="./images/data.png" alt="Data Cleaning Icon">
-            <h3>Data Cleaning & Preprocessing</h3>
-            <p>Removal of duplicates, handling missing values, outlier detection, and data normalization.</p>
-            <p><strong>Cost:</strong> Starting at $10</p>
-          </div>
-          <!-- Service 2: Data Visualization & Reporting -->
-          <div class="service-item">
-            <img src="./images/data%20science.jpeg" alt="Data Visualization Icon">
-            <h3>Data Visualization & Reporting</h3>
-            <p>Interactive dashboards and comprehensive visual reports that illuminate trends and insights.</p>
-            <p><strong>Cost:</strong> Starting at $20</p>
-          </div>
-          <!-- Service 3: Trends & Strategy Analysis -->
-          <div class="service-item">
-            <img src="./images/sales.png" alt="Strategy Analysis Icon">
-            <h3>Trends & Strategy Analysis</h3>
-            <p>In-depth analysis of emerging trends with actionable strategic recommendations tailored to your business.</p>
-            <p><strong>Cost:</strong> Starting at $30</p>
-          </div>
-          <!-- Service 4: Detailed Explanation & Reporting -->
-          <div class="service-item">
-            <img src="./images/work.png" alt="Detailed Reporting Icon">
-            <h3>Detailed Explanation & Reporting</h3>
-            <p>Comprehensive documentation and presentation of insights ensuring clarity for informed decisions.</p>
-            <p><strong>Cost:</strong> Starting at $25</p>
-          </div>
-          <!-- Service 5: K-Means Clustering Analysis -->
-          <div class="service-item">
-            <img src="./images/python.jpeg" alt="Clustering Analysis Icon">
-            <h3>K-Means Clustering Analysis</h3>
-            <p>Customer segmentation and clustering to identify patterns and drive targeted strategies.</p>
-            <p><strong>Cost:</strong> Starting at $27</p>
-          </div>
-          <!-- Service 6: Association Rule Mining & Probability Analysis -->
-          <div class="service-item">
-            <img src="./images/data.png" alt="Association Rule Mining Icon">
-            <h3>Association Rule Mining & Probability Analysis</h3>
-            <p>Identification of significant association rules and probability-based insights for optimization.</p>
-            <p><strong>Cost:</strong> Starting at $35</p>
-          </div>
-          <!-- Service 7: Advanced Malware Engineering -->
-          <div class="service-item">
-            <img src="./images/malware.jpeg" alt="Advanced Malware Icon">
-            <h3>Advanced Malware Engineering</h3>
-            <p>Simulation and analysis of rootkits, keyloggers, logic bombs, and ransomware for training and research.</p>
-            <p><strong>Cost:</strong> Starting at $40</p>
-          </div>
-        </div>
+        <h1 class="section-heading">Key Strengths</h1>
+        <ul>
+          <li>Expertise in Cybersecurity: Offensive & defensive strategies, ethical hacking, and network security.</li>
+          <li>Data Analytics: Proficient in Python, SQL, Power BI, and Tableau for deep data insights.</li>
+          <li>Full-Stack Development: Solid foundation in web technologies and software development.</li>
+          <li>Continuous Learning: Constantly upskilling through certifications and hands-on projects.</li>
+          <li>Community Engagement: Active volunteer and collaborative team member.</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section card-section experience">
+    <!-- 5. Education -->
+    <section id="education" class="section card-section">
       <div class="container">
-        <h1 class="section-heading">Professional Experience</h1>
-        <div class="item">
-          <h2>Data Analyst Specialist Trainee</h2>
-          <p><strong>Digital Egypt Pioneers Initiative - DEPI</strong> | Sep 2024 - Present · Alexandria, Egypt · Hybrid</p>
-          <p>Analyzing large datasets using Python, SQL, and Tableau. Collaborating with teams to identify trends, improve data models, and enhance customer satisfaction through data-driven insights.</p>
-        </div>
-        <div class="item">
-          <h2>Internship Trainee</h2>
-          <p><strong>Information Technology Institute (ITI)</strong> | Sep 2024 - Oct 2024 · Alexandria, Egypt · Remote</p>
-          <p>Completed comprehensive training in web development fundamentals including Scratch, CSS, HTML, and CS50. Developed interactive projects and enhanced problem-solving skills.</p>
-        </div>
-        <div class="item">
-          <h2>Intern</h2>
-          <p><strong>Offense Crest</strong> | Aug 2024 - Oct 2024 · Alexandria, Egypt · Hybrid</p>
-          <p>Specialized in Cybersecurity, C/C++, Assembly, and networking. Implemented AES encryption in Assembly on Linux and gained system-level programming expertise.</p>
-        </div>
-        <div class="item">
-          <h2>Internship Trainee</h2>
-          <p><strong>Information Technology Industry Development Agency (ITIDA)</strong> | Sep 2024 · Alexandria, Egypt · On-site</p>
-          <p>Developed skills in innovation, entrepreneurship, and creative problem-solving. Completed certifications focused on technology leadership and collaboration.</p>
-        </div>
-        <div class="item">
-          <h2>Internship Trainee</h2>
-          <p><strong>CIB Egypt</strong> | Aug 2024 - Sep 2024 · Alexandria, Egypt · Remote</p>
-          <p>Focused on Data Literacy and Digital Transformation. Completed the CIB Summer Bootcamp on leadership and earned certifications in business technology integration.</p>
+        <h1 class="section-heading">Education</h1>
+        <div class="item" style="overflow:auto;">
+          <img src="./images/alexandria_university_logo.jpg" alt="Alexandria University Logo" style="width:80px; float:left; margin-right:20px;">
+          <h2>Alexandria University</h2>
+          <p><strong>Bachelor's degree, Computer Science</strong> | Sep 2023 - Jul 2027</p>
+          <p>Grade: CGPA 3.6336</p>
+          <p>Activities: Volleyball, Pianist, Choir Member</p>
+          <p>Relevant Coursework: Programming, Object-Oriented Programming (OOP), and more.</p>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section card-section projects">
-      <div class="container">
-        <h1 class="section-heading">Projects & Data Analytics Work</h1>
-        <!-- Project 1: Retail Analytics -->
-        <div class="item project">
-          <div class="project-info">
-            <h2>Comprehensive Retail Analytics</h2>
-            <p><em>Dec 2024</em></p>
-            <p>
-              In-depth exploratory analysis on retail sales data, identifying trends across product categories, regional performance, and customer segmentation. Utilized Python and Jupyter for visualization.
-            </p>
-            <a href="https://github.com/AS2812/data_science/tree/main/DEPI-data-analysis" target="_blank">View Project on GitHub</a>
-          </div>
-          <div class="project-image">
-            <a href="https://github.com/AS2812/data_science/tree/main/DEPI-data-analysis" target="_blank">
-              <img src="./images/Screenshot_1-2-2025_153829_.jpeg" alt="Retail Analytics Project">
-            </a>
-          </div>
-        </div>
-        <!-- Project 2: Malware Simulation -->
-        <div class="item project">
-          <div class="project-info">
-            <h2>Malware Simulation Project</h2>
-            <p><em>Oct 2024 - Nov 2024</em></p>
-            <p>
-              Simulated ransomware behavior for educational purposes. Explore the cybersecurity programming and simulation details on LinkedIn.
-            </p>
-            <a href="https://www.linkedin.com/posts/ahmed-shacker-helmi_cybersecurity-programming-ransomwaresimulation-activity-7265068897844776961-yDOr" target="_blank">View Project on LinkedIn</a>
-          </div>
-          <div class="project-image">
-            <a href="https://www.linkedin.com/posts/ahmed-shacker-helmi_cybersecurity-programming-ransomwaresimulation-activity-7265068897844776961-yDOr" target="_blank">
-              <img src="https://raw.githubusercontent.com/AS2812/Front-end/main/Personal%20Portfolio%20Website/images/malware.jpeg" alt="Malware Simulation Project">
-            </a>
-          </div>
-        </div>
-        <!-- Project 3: Customer Data Analysis -->
-        <div class="item project">
-          <div class="project-info">
-            <h2>Customer Data Analysis</h2>
-            <p><em>Sep 2024</em></p>
-            <p>
-              An interactive Shiny application for customer behavior analysis featuring data visualization, clustering, and association rule mining.
-            </p>
-            <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
-          </div>
-          <div class="project-image">
-            <a href="https://github.com/AS2812/data_science" target="_blank">
-              <img src="./images/Screenshot_1-2-2025_153925_.jpeg" alt="Customer Data Analysis Project">
-            </a>
-          </div>
-        </div>
-        <!-- Project 4: Front-End Projects -->
-        <div class="item project">
-          <div class="project-info">
-            <h2>Front-End Projects</h2>
-            <p><em>Aug 2024</em></p>
-            <p>
-              Responsive web applications including Twitter and YouTube clones, focusing on clean design and optimal user experience.
-            </p>
-            <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
-          </div>
-          <div class="project-image">
-            <a href="https://github.com/AS2812/data_science" target="_blank">
-              <img src="./images/Screenshot_1-2-2025_153937_.jpeg" alt="Front-End Projects">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Licenses & Certifications Section (Text Only) -->
-    <section id="certifications" class="section card-section certifications">
-      <div class="container">
-        <h1 class="section-heading">Licenses & Certifications</h1>
-        <div class="certifications-grid">
-          <!-- Certification 1: Accenture Simulation -->
-          <div class="cert-item">
-            <h3>Accenture Data Analytics & Visualization Job Simulation</h3>
-            <p><strong>Issued:</strong> Feb 2025</p>
-            <p><strong>Credential ID:</strong> MrstNHkYTpwGAnEAZ</p>
-            <p>Demonstrated proficiency in data analysis and visualization through a comprehensive job simulation.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-          <!-- Certification 2: TryHackMe Pre Security -->
-          <div class="cert-item">
-            <h3>Certified in Pre Security</h3>
-            <p><strong>Issued:</strong> Jan 2025</p>
-            <p><strong>Credential ID:</strong> THM-RBYGX8KK2C</p>
-            <p>Completed foundational cybersecurity training, focusing on offensive and defensive security principles.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-          <!-- Certification 3: HackerRank Python -->
-          <div class="cert-item">
-            <h3>Python (Basic) Certification</h3>
-            <p><strong>Issued:</strong> Jan 2025</p>
-            <p><strong>Credential ID:</strong> 699e0c8edce4</p>
-            <p>Validated core Python skills including data types, control flow, and OOP concepts.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-          <!-- Certification 4: HackerRank SQL -->
-          <div class="cert-item">
-            <h3>SQL (Basic) Certification</h3>
-            <p><strong>Issued:</strong> Jan 2025</p>
-            <p><strong>Credential ID:</strong> f1932d139c53</p>
-            <p>Demonstrated proficiency in writing queries, managing relationships, and utilizing aggregators.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-          <!-- Certification 5: Google Networks -->
-          <div class="cert-item">
-            <h3>Connect and Protect: Networks & Security</h3>
-            <p><strong>Issued:</strong> Jan 2025</p>
-            <p><strong>Credential ID:</strong> GP3LCWLDY17W</p>
-            <p>Acquired skills in network architecture, TCP/IP, and security hardening techniques.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-          <!-- Certification 6: Google Play It Safe -->
-          <div class="cert-item">
-            <h3>Play It Safe: Manage Security Risks</h3>
-            <p><strong>Issued:</strong> Jan 2025</p>
-            <p><strong>Credential ID:</strong> LHF1CQWEU7Q3</p>
-            <p>Gained expertise in risk management, NIST frameworks, and incident response strategies.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-          <!-- Certification 7: Google Foundations -->
-          <div class="cert-item">
-            <h3>Foundations of Cybersecurity</h3>
-            <p><strong>Issued:</strong> Dec 2024</p>
-            <p><strong>Credential ID:</strong> DNZG7XURSSZB</p>
-            <p>Mastered cybersecurity fundamentals, ethical principles, and essential security tools.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-          <!-- Certification 8: Google Cloud Security -->
-          <div class="cert-item">
-            <h3>Intro to Security Principles in Cloud Computing</h3>
-            <p><strong>Issued:</strong> Oct 2024</p>
-            <p><strong>Credential ID:</strong> 07FPZNPI8WMH</p>
-            <p>Achieved mastery in cloud security fundamentals and digital transformation concepts.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-          <!-- Certification 9: SAS Data Literacy -->
-          <div class="cert-item">
-            <h3>Data Literacy Essentials</h3>
-            <p><strong>Issued:</strong> Aug 2024</p>
-            <p>Developed a strong foundation in data literacy, essential for effective data analysis.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-          <!-- Certification 10: HackerRank Java -->
-          <div class="cert-item">
-            <h3>Java (Basic) Certification</h3>
-            <p><strong>Issued:</strong> Jul 2024</p>
-            <p><strong>Credential ID:</strong> 16134779d953</p>
-            <p>Validated proficiency in core Java programming concepts.</p>
-            <a href="#" target="_blank">Show Credential</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section card-section skills">
+    <!-- 6. Skills -->
+    <section id="skills" class="section card-section">
       <div class="container">
         <h1 class="section-heading">Skills</h1>
         <div class="item">
@@ -695,7 +434,7 @@
           </div>
         </div>
         <div class="item">
-          <h2>Data Analysis</h2>
+          <h2>Data Analytics</h2>
           <div>
             <span class="skill-tag">Data Cleaning</span>
             <span class="skill-tag">Statistical Analysis</span>
@@ -725,47 +464,218 @@
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section card-section education">
+    <!-- 7. Work Experience -->
+    <section id="experience" class="section card-section">
       <div class="container">
-        <h1 class="section-heading">Education</h1>
-        <div class="item" style="overflow: auto;">
-          <img src="./images/alexandria_university_logo.jpg" alt="Alexandria University Logo" style="width:80px; float:left; margin-right:20px;">
-          <h2>Alexandria University</h2>
-          <p><strong>Bachelor's degree, Computer Science</strong> | Sep 2023 - Jul 2027</p>
-          <p>Grade: CGPA 3.6336</p>
-          <p>Activities and societies: Volleyball, Pianist, Choir Member</p>
-          <p>Relevant Skills: Programming, Object-Oriented Programming (OOP), and more.</p>
+        <h1 class="section-heading">Work Experience</h1>
+        <div class="item">
+          <h2>Data Analyst Specialist Trainee</h2>
+          <p><strong>Digital Egypt Pioneers Initiative - DEPI</strong> | Sep 2024 - Present · Alexandria, Egypt · Hybrid</p>
+          <p>Analyzing large datasets using Python, SQL, and Tableau. Collaborating with teams to uncover trends and drive data-informed decisions.</p>
+        </div>
+        <div class="item">
+          <h2>Internship Trainee</h2>
+          <p><strong>Information Technology Institute (ITI)</strong> | Sep 2024 - Oct 2024 · Alexandria, Egypt · Remote</p>
+          <p>Completed training in web development fundamentals including Scratch, CSS, HTML, and CS50 while developing interactive projects.</p>
+        </div>
+        <div class="item">
+          <h2>Intern</h2>
+          <p><strong>Offense Crest</strong> | Aug 2024 - Oct 2024 · Alexandria, Egypt · Hybrid</p>
+          <p>Specialized in cybersecurity, C/C++, Assembly, and networking; implemented AES encryption in Assembly on Linux.</p>
+        </div>
+        <div class="item">
+          <h2>Internship Trainee</h2>
+          <p><strong>ITIDA</strong> | Sep 2024 · Alexandria, Egypt · On-site</p>
+          <p>Developed skills in innovation, entrepreneurship, and creative problem-solving, and completed technology leadership certifications.</p>
+        </div>
+        <div class="item">
+          <h2>Internship Trainee</h2>
+          <p><strong>CIB Egypt</strong> | Aug 2024 - Sep 2024 · Alexandria, Egypt · Remote</p>
+          <p>Focused on Data Literacy and Digital Transformation through intensive bootcamp training and certification programs.</p>
         </div>
       </div>
     </section>
 
-    <!-- Volunteering Section -->
-    <section id="volunteering" class="section card-section volunteering">
+    <!-- 8. Services (Without Prices) -->
+    <section id="services" class="section card-section">
       <div class="container">
-        <h1 class="section-heading">Volunteering</h1>
-        <div class="item">
-          <h2>Volunteer</h2>
-          <p><strong>IEEE AlexCSC - Activities Committee</strong> | Feb 2024 - Sep 2024 · Alexandria, Egypt</p>
-          <p>
-            Active member of the IEEE Computer Society Student Chapter at Alexandria University. Recognized with an Outstanding Volunteer certificate for contributions to STEM education, technology promotion, and community outreach.
-          </p>
-          <div>
-            <span class="skill-tag">Event Planning</span>
-            <span class="skill-tag">Leadership</span>
-            <span class="skill-tag">Community Outreach</span>
-            <span class="skill-tag">STEM Education</span>
+        <h1 class="section-heading">Services</h1>
+        <div class="services-grid">
+          <div class="service-item">
+            <img src="./images/data.png" alt="Data Cleaning Icon">
+            <h3>Data Cleaning & Preprocessing</h3>
+            <p>Removal of duplicates, handling missing values, outlier detection, and data normalization.</p>
+          </div>
+          <div class="service-item">
+            <img src="./images/data%20science.jpeg" alt="Data Visualization Icon">
+            <h3>Data Visualization & Reporting</h3>
+            <p>Creation of interactive dashboards and visual reports that reveal actionable insights.</p>
+          </div>
+          <div class="service-item">
+            <img src="./images/sales.png" alt="Trends Analysis Icon">
+            <h3>Trends & Strategy Analysis</h3>
+            <p>In-depth analysis of emerging trends with strategic recommendations tailored to your business.</p>
+          </div>
+          <div class="service-item">
+            <img src="./images/work.png" alt="Detailed Reporting Icon">
+            <h3>Detailed Explanation & Reporting</h3>
+            <p>Comprehensive documentation and presentation of insights to support informed decision-making.</p>
+          </div>
+          <div class="service-item">
+            <img src="./images/python.jpeg" alt="Clustering Analysis Icon">
+            <h3>K-Means Clustering Analysis</h3>
+            <p>Customer segmentation and clustering to identify patterns and drive targeted strategies.</p>
+          </div>
+          <div class="service-item">
+            <img src="./images/data.png" alt="Association Rule Mining Icon">
+            <h3>Association Rule Mining & Probability Analysis</h3>
+            <p>Identification of key association rules and probability-based insights for operational optimization.</p>
+          </div>
+          <div class="service-item">
+            <img src="./images/malware.jpeg" alt="Advanced Malware Engineering Icon">
+            <h3>Advanced Malware Engineering</h3>
+            <p>Simulation and analysis of sophisticated malware (rootkits, keyloggers, logic bombs, ransomware) for training and research.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section card-section contact">
+    <!-- 9. Projects -->
+    <section id="projects" class="section card-section projects">
       <div class="container">
-        <h1 class="section-heading">Contact Me</h1>
-        <p style="text-align:center; margin-bottom:20px;">We'd love to hear from you! Please fill out the form below and I will get back to you as soon as possible.</p>
-        <div class="contact-info" style="text-align: center;">
+        <h1 class="section-heading">Projects</h1>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Comprehensive Retail Analytics</h2>
+            <p><em>Dec 2024</em></p>
+            <p>
+              An exploratory analysis on retail sales data, uncovering trends across product categories, regional performance, and customer segmentation using Python and Jupyter.
+            </p>
+            <a href="https://github.com/AS2812/data_science/tree/main/DEPI-data-analysis" target="_blank">View on GitHub</a>
+          </div>
+          <div class="project-image">
+            <a href="https://github.com/AS2812/data_science/tree/main/DEPI-data-analysis" target="_blank">
+              <img src="./images/Screenshot_1-2-2025_153829_.jpeg" alt="Retail Analytics Project">
+            </a>
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Malware Simulation Project</h2>
+            <p><em>Oct 2024 - Nov 2024</em></p>
+            <p>
+              A simulation of ransomware behavior for educational purposes—detailed insights into cybersecurity programming and malware analysis.
+            </p>
+            <a href="https://www.linkedin.com/posts/ahmed-shacker-helmi_cybersecurity-programming-ransomwaresimulation-activity-7265068897844776961-yDOr" target="_blank">View on LinkedIn</a>
+          </div>
+          <div class="project-image">
+            <a href="https://www.linkedin.com/posts/ahmed-shacker-helmi_cybersecurity-programming-ransomwaresimulation-activity-7265068897844776961-yDOr" target="_blank">
+              <img src="https://raw.githubusercontent.com/AS2812/Front-end/main/Personal%20Portfolio%20Website/images/malware.jpeg" alt="Malware Simulation Project">
+            </a>
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Customer Data Analysis</h2>
+            <p><em>Sep 2024</em></p>
+            <p>
+              An interactive Shiny application analyzing customer behavior with advanced visualization and clustering techniques.
+            </p>
+            <a href="https://github.com/AS2812/data_science" target="_blank">View on GitHub</a>
+          </div>
+          <div class="project-image">
+            <a href="https://github.com/AS2812/data_science" target="_blank">
+              <img src="./images/Screenshot_1-2-2025_153925_.jpeg" alt="Customer Data Analysis Project">
+            </a>
+          </div>
+        </div>
+        <div class="item project">
+          <div class="project-info">
+            <h2>Front-End Projects</h2>
+            <p><em>Aug 2024</em></p>
+            <p>
+              Responsive web applications (Twitter and YouTube clones) with a focus on clean design and user experience.
+            </p>
+            <a href="https://github.com/AS2812/data_science" target="_blank">View on GitHub</a>
+          </div>
+          <div class="project-image">
+            <a href="https://github.com/AS2812/data_science" target="_blank">
+              <img src="./images/Screenshot_1-2-2025_153937_.jpeg" alt="Front-End Projects">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Achievements (Certifications & Volunteer) -->
+    <section id="achievements" class="section card-section">
+      <div class="container">
+        <h1 class="section-heading">Achievements</h1>
+        <div class="certifications-grid" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+          <!-- Certification 1: Accenture Simulation -->
+          <div class="cert-item">
+            <h3>Accenture Data Analytics & Visualization Job Simulation</h3>
+            <p><strong>Issued:</strong> Feb 2025</p>
+            <p><strong>ID:</strong> MrstNHkYTpwGAnEAZ</p>
+            <p>Demonstrated proficiency in data analysis and visualization through a comprehensive job simulation.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 2: TryHackMe Pre Security -->
+          <div class="cert-item">
+            <h3>Certified in Pre Security</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>ID:</strong> THM-RBYGX8KK2C</p>
+            <p>Completed foundational cybersecurity training focusing on offensive and defensive strategies.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 3: HackerRank Python -->
+          <div class="cert-item">
+            <h3>Python (Basic) Certification</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>ID:</strong> 699e0c8edce4</p>
+            <p>Validated core Python skills including data types, control flow, and OOP.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 4: HackerRank SQL -->
+          <div class="cert-item">
+            <h3>SQL (Basic) Certification</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>ID:</strong> f1932d139c53</p>
+            <p>Demonstrated proficiency in writing queries and managing relational data.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Additional certifications can be added similarly -->
+        </div>
+        <!-- Volunteer Achievement -->
+        <div class="item" style="margin-top:30px;">
+          <h2>Volunteer Achievements</h2>
+          <p>
+            Active volunteer with IEEE AlexCSC and Full-Stack Technical Team. Recognized for contributions to STEM education and community outreach.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Review (Profile Analytics) -->
+    <section id="review" class="section card-section">
+      <div class="container">
+        <h1 class="section-heading">Review</h1>
+        <p style="text-align:center;">Analytics Overview:</p>
+        <ul style="list-style:none; text-align:center; padding:0;">
+          <li>195 Profile Views</li>
+          <li>958 Post Impressions</li>
+          <li>38 Search Appearances</li>
+        </ul>
+        <p style="text-align:center;">Discover who's engaging with your profile.</p>
+      </div>
+    </section>
+
+    <!-- 12. Contact Us -->
+    <section id="contact" class="section card-section">
+      <div class="container">
+        <h1 class="section-heading">Contact Us</h1>
+        <p style="text-align:center; margin-bottom:20px;">We'd love to hear from you! Please fill out the form below and I'll get back to you as soon as possible.</p>
+        <div class="contact-info" style="text-align:center;">
           <p><strong><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone" style="width:20px; vertical-align:middle;"> Phone:</strong> <a href="tel:+201200866039">+20 1200 866039</a></p>
           <p><strong><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" style="width:20px; vertical-align:middle;"> Email:</strong> <a href="mailto:ahmedchacker@gmail.com">ahmedchacker@gmail.com</a></p>
           <p><strong><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:20px; vertical-align:middle;"> LinkedIn:</strong> <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank">linkedin.com/in/ahmed-shacker-helmi</a></p>
@@ -796,7 +706,7 @@
 
     <!-- Footer -->
     <footer>
-      <img class="logo" src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="Logo">
+      <img class="logo" src="./images/ahmed-profile.jpg" alt="Profile Image">
       <div class="footer-socials">
         <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
