@@ -69,7 +69,6 @@
       padding: 15px 0;
     }
 
-    /* Branding with TryHackMe logo */
     .branding {
       display: flex;
       align-items: center;
@@ -97,7 +96,6 @@
     }
 
     /* ------------------------- HERO / HEADER ------------------------- */
-    /* Instead of margin-top, we add padding-top to push content below the fixed nav */
     header.hero {
       position: relative;
       min-height: calc(80vh + var(--nav-height));
@@ -384,9 +382,8 @@
       <nav>
         <div class="container nav-inner">
           <div class="branding">
-            <!-- TryHackMe Logo from provided GitHub link -->
-            <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="TryHackMe Logo">
-            <!-- Site Name -->
+            <!-- Logo -->
+            <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="Logo">
             <h2>Ahmed Shacker Helmi</h2>
           </div>
           <div class="nav-links">
@@ -397,6 +394,7 @@
             <a href="#projects">Projects</a>
             <a href="#certifications">Certifications</a>
             <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
             <a href="#volunteering">Volunteering</a>
             <a href="#contact">Contact</a>
           </div>
@@ -410,10 +408,9 @@
         <h1>Ahmed Shacker Helmi</h1>
         <p>Cybersecurity Student at Alexandria University | Data Analyst Specialist Trainee</p>
         <p>Alexandria, Egypt</p>
-        <!-- Removed Download CV button to focus on collaboration -->
       </div>
     </section>
-  
+
     <!-- About Section -->
     <section id="about" class="section card-section about">
       <div class="container">
@@ -422,7 +419,6 @@
           I am a passionate Computer Science student specializing in Cybersecurity and Data Analysis. With robust expertise in ethical hacking, network security, and data-driven decision making, I help businesses transform raw data into actionable insights. If you’re looking for a dedicated professional to secure your systems and unlock the potential of your data, let’s connect!
         </p>
         <div class="social" style="text-align: center; margin-top: 20px;">
-          <!-- Social Logos -->
           <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn">
             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width:32px; margin:0 10px;">
           </a>
@@ -439,7 +435,7 @@
       </div>
     </section>
 
-    <!-- New Collaboration Section -->
+    <!-- Collaboration Section -->
     <section id="collaboration" class="section card-section collaboration">
       <div class="container">
         <h1 class="section-heading">Let's Collaborate</h1>
@@ -447,10 +443,7 @@
           Are you ready to harness the power of data analytics to drive your business forward? I specialize in transforming complex datasets into actionable insights that optimize decision-making, boost efficiency, and fuel growth.
         </p>
         <p>
-          With proven expertise in advanced analytics, statistical modeling, and data visualization, I offer tailored solutions in areas such as retail analytics, customer segmentation, and predictive modeling. Let’s partner together to turn your data into a strategic asset.
-        </p>
-        <p>
-          Interested in exploring how data can empower your organization? Reach out today!
+          With proven expertise in advanced analytics, statistical modeling, and interactive dashboards, I offer tailored solutions—from retail analytics to predictive modeling and digital strategy. Let’s partner to turn your data into a strategic asset.
         </p>
         <a class="btn-contact" href="#contact">Get in Touch</a>
       </div>
@@ -461,29 +454,41 @@
       <div class="container">
         <h1 class="section-heading">Services</h1>
         <div class="services-grid">
-          <!-- Service 1: Cybersecurity Assessment -->
+          <!-- 1. Cybersecurity Assessment -->
           <div class="service-item">
             <img src="./images/malware.jpeg" alt="Cybersecurity Icon">
             <h3>Cybersecurity Assessment</h3>
             <p>Comprehensive security audits, penetration testing, and vulnerability assessments to protect your digital assets.</p>
           </div>
-          <!-- Service 2: Data Analysis -->
+          <!-- 2. Data Analysis & Visualization -->
           <div class="service-item">
             <img src="./images/data%20science.jpeg" alt="Data Analysis Icon">
-            <h3>Data Analysis</h3>
-            <p>Transforming complex data into actionable insights using Python, SQL, and advanced analytics techniques.</p>
+            <h3>Data Analysis & Visualization</h3>
+            <p>Transform raw data into insightful dashboards and interactive visualizations using Python, SQL, and Tableau.</p>
           </div>
-          <!-- Service 3: Web Development -->
+          <!-- 3. Work & Sales Data Insights -->
+          <div class="service-item">
+            <img src="./images/sales.png" alt="Sales Data Icon">
+            <h3>Work & Sales Data Insights</h3>
+            <p>Leverage data analytics to optimize work processes and boost sales performance for strategic growth.</p>
+          </div>
+          <!-- 4. Data Cleaning, Trends & Dashboard Solutions -->
+          <div class="service-item">
+            <img src="./images/data.png" alt="Data Cleaning Icon">
+            <h3>Data Cleaning & Trend Analysis</h3>
+            <p>Implement robust data cleaning and trend analysis to build interactive dashboards that drive decision-making.</p>
+          </div>
+          <!-- 5. Advanced Malware Engineering & Simulation -->
+          <div class="service-item">
+            <img src="./images/malware.jpeg" alt="Advanced Malware Icon">
+            <h3>Advanced Malware Engineering</h3>
+            <p>Simulate and analyze sophisticated malware techniques—including rootkits, keyloggers, logic bombs, and ransomware—for research and training.</p>
+          </div>
+          <!-- 6. Web Development & Digital Strategy -->
           <div class="service-item">
             <img src="./images/1.jpg" alt="Web Development Icon">
-            <h3>Web Development</h3>
-            <p>Developing secure, responsive web applications that enhance your online presence and drive growth.</p>
-          </div>
-          <!-- Service 4: Consulting & Strategy -->
-          <div class="service-item">
-            <img src="./images/Screenshot_1-2-2025_15417_.jpeg" alt="Consulting Icon">
-            <h3>Consulting & Strategy</h3>
-            <p>Expert advice and strategic planning to optimize your technology and security investments.</p>
+            <h3>Web Development & Digital Strategy</h3>
+            <p>Develop secure, responsive web applications paired with digital strategies to enhance your online presence.</p>
           </div>
         </div>
       </div>
@@ -531,7 +536,7 @@
             <h2>Comprehensive Retail Analytics</h2>
             <p><em>Dec 2024</em></p>
             <p>
-              In-depth exploratory data analysis on retail sales data, identifying trends in product categories, regional performance, and customer segmentation. Utilized Python and Jupyter for visualization.
+              In-depth exploratory analysis on retail sales data, identifying trends across product categories, regional performance, and customer segmentation. Utilized Python and Jupyter for visualization.
             </p>
             <a href="https://github.com/AS2812/data_science/tree/main/DEPI-data-analysis" target="_blank">View Project on GitHub</a>
           </div>
@@ -579,7 +584,7 @@
             <h2>Front-End Projects</h2>
             <p><em>Aug 2024</em></p>
             <p>
-              Responsive web applications including Twitter and YouTube clones focusing on clean design and user experience.
+              Responsive web applications including Twitter and YouTube clones, focusing on clean design and user experience.
             </p>
             <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
           </div>
@@ -608,76 +613,6 @@
           </div>
           <div class="project-image">
             <img src="./images/Screenshot_1-2-2025_153954_.jpeg" alt="Another Project Screenshot">
-          </div>
-        </div>
-        <div class="item project">
-          <div class="project-info">
-            <h2>Additional Project Detail</h2>
-            <p><em>Example</em></p>
-            <p>Extra project screenshot.</p>
-          </div>
-          <div class="project-image">
-            <img src="./images/Screenshot_1-2-2025_15395_.jpeg" alt="Extra Project Screenshot">
-          </div>
-        </div>
-        <div class="item project">
-          <div class="project-info">
-            <h2>More Work Example</h2>
-            <p><em>Example</em></p>
-            <p>Demonstrating further project details.</p>
-          </div>
-          <div class="project-image">
-            <img src="./images/Screenshot_1-2-2025_154011_.jpeg" alt="Work Example Screenshot">
-          </div>
-        </div>
-        <div class="item project">
-          <div class="project-info">
-            <h2>Extra Project Work</h2>
-            <p><em>Example</em></p>
-            <p>Another extra project visual.</p>
-          </div>
-          <div class="project-image">
-            <img src="./images/Screenshot_1-2-2025_154026_.jpeg" alt="Extra Project Work">
-          </div>
-        </div>
-        <div class="item project">
-          <div class="project-info">
-            <h2>Additional Detail</h2>
-            <p><em>Example</em></p>
-            <p>More project detail imagery.</p>
-          </div>
-          <div class="project-image">
-            <img src="./images/Screenshot_1-2-2025_154034_.jpeg" alt="Project Detail Screenshot">
-          </div>
-        </div>
-        <div class="item project">
-          <div class="project-info">
-            <h2>Final Project Example</h2>
-            <p><em>Example</em></p>
-            <p>Final project example screenshot.</p>
-          </div>
-          <div class="project-image">
-            <img src="./images/Screenshot_1-2-2025_154055_.jpeg" alt="Final Project Screenshot">
-          </div>
-        </div>
-        <div class="item project">
-          <div class="project-info">
-            <h2>Extra Detail 2</h2>
-            <p><em>Example</em></p>
-            <p>One more project screenshot.</p>
-          </div>
-          <div class="project-image">
-            <img src="./images/Screenshot_1-2-2025_15411_.jpeg" alt="Extra Detail Screenshot">
-          </div>
-        </div>
-        <div class="item project">
-          <div class="project-info">
-            <h2>Additional Work</h2>
-            <p><em>Example</em></p>
-            <p>Another final example of project work.</p>
-          </div>
-          <div class="project-image">
-            <img src="./images/Screenshot_1-2-2025_15417_.jpeg" alt="Additional Work Screenshot">
           </div>
         </div>
       </div>
@@ -797,6 +732,21 @@
             <span class="skill-tag">English</span>
             <span class="skill-tag">French (DELF B1)</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section card-section education">
+      <div class="container">
+        <h1 class="section-heading">Education</h1>
+        <div class="item" style="overflow: auto;">
+          <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="Alexandria University Logo" style="width:80px; float:left; margin-right:20px;">
+          <h2>Alexandria University</h2>
+          <p><strong>Bachelor's degree, Computer Science</strong> | Sep 2023 - Jul 2027</p>
+          <p>Grade: CGPA 3.6336</p>
+          <p>Activities and societies: Volleyball, Pianist, Choir Member</p>
+          <p>Relevant Skills: Programming, Object-Oriented Programming (OOP) and +10 skills.</p>
         </div>
       </div>
     </section>
