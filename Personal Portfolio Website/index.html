@@ -109,8 +109,8 @@
       margin-bottom: 5px;
     }
     /* ------------------------- PROFILE (HERO) SECTION ------------------------- */
-    /* Profile section uses a hero style with background image */
-    header.hero {
+    /* The profile section acts as a hero area with your personal image and details */
+    #profile.hero {
       position: relative;
       min-height: calc(80vh + var(--nav-height));
       background: url('./images/main.png') center/cover no-repeat;
@@ -121,7 +121,7 @@
       text-align: center;
       padding-top: var(--nav-height);
     }
-    header.hero::before {
+    #profile.hero::before {
       content: "";
       position: absolute;
       top: 0;
@@ -232,6 +232,29 @@
       margin-bottom: 10px;
       color: var(--primary-color);
     }
+    /* ------------------------- ACHIEVEMENTS (CERTIFICATIONS & VOLUNTEER) ------------------------- */
+    .certifications-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .cert-item {
+      background-color: var(--card-background);
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 300px;
+      flex: 1 1 300px;
+    }
+    .cert-item h3 {
+      font-size: 1.3em;
+      margin-bottom: 5px;
+      color: var(--primary-color);
+    }
+    .cert-item p {
+      font-size: 0.9em;
+      margin: 5px 0;
+    }
     /* ------------------------- CONTACT FORM ------------------------- */
     .contact-form {
       background: var(--card-background);
@@ -293,7 +316,7 @@
     }
     /* ------------------------- RESPONSIVE ------------------------- */
     @media (max-width: 768px) {
-      header.hero {
+      #profile.hero {
         min-height: calc(60vh + var(--nav-height));
       }
       .hero-content h1 {
@@ -308,7 +331,7 @@
       .project {
         flex-direction: column;
       }
-      .services-grid {
+      .services-grid, .certifications-grid {
         flex-direction: column;
         align-items: center;
       }
@@ -322,13 +345,13 @@
       <nav>
         <div class="container nav-inner">
           <div class="branding">
-            <!-- Use your profile image as the logo -->
+            <!-- Use your profile image as logo in navigation -->
             <img src="./images/ahmed-profile.jpg" alt="Profile Logo">
             <h2>Ahmed Shacker Helmi</h2>
           </div>
           <div class="nav-links">
             <a href="#profile">Profile</a>
-            <a href="#about">About</a>
+            <a href="#about">About Me</a>
             <a href="#mystory">My Story</a>
             <a href="#strengths">Key Strengths</a>
             <a href="#education">Education</a>
@@ -338,22 +361,20 @@
             <a href="#projects">Projects</a>
             <a href="#achievements">Achievements</a>
             <a href="#review">Review</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contact Us</a>
           </div>
         </div>
       </nav>
     </header>
 
-    <!-- 1. Profile Section (Title, Job & Name) -->
+    <!-- 1. Profile Section -->
     <section id="profile" class="hero">
       <div class="hero-content container">
         <img src="./images/ahmed-profile.jpg" alt="Ahmed Profile" class="profile">
         <h1>Ahmed Shacker Helmi <small>(He/Him)</small></h1>
-        <p>Volunteer at HackerRank & Full-Stack Technical Team | Intern in DEPI Data Analytics Training</p>
-        <p>Graduate of College Saint-Marc, Alexandria | Cybersecurity Student at Alexandria University</p>
-        <p><strong>Digital Egypt Pioneers Initiative - DEPI</strong></p>
-        <p><strong>Alexandria University</strong> • Alexandria, Egypt</p>
-        <p>500+ Connections • Open to Opportunities</p>
+        <p>Volunteer at HackerRank & Full-Stack Technical Team, and intern in DEPI Data Analytics Training | Francophone | Graduate of College Saint-Marc, Alexandria | Cybersecurity Student at Alexandria University</p>
+        <p><strong>Digital Egypt Pioneers Initiative - DEPI</strong> • <strong>Alexandria University</strong></p>
+        <p>Alexandria, Egypt • 500+ Connections • Open to Opportunities</p>
       </div>
     </section>
 
@@ -362,17 +383,17 @@
       <div class="container">
         <h1 class="section-heading">About Me</h1>
         <p>
-          I'm a highly motivated Computer Science student at Alexandria University specializing in Cybersecurity. I thrive on transforming complex challenges into innovative solutions—whether through ethical hacking, data analytics, or full-stack development.
+          I'm a highly motivated Computer Science student at Alexandria University specializing in Cybersecurity. I thrive on transforming complex challenges into innovative solutions—whether through ethical hacking, data analytics, or full‑stack development.
         </p>
       </div>
     </section>
 
-    <!-- 3. My Story (Hook / Storytelling Overview) -->
+    <!-- 3. My Story -->
     <section id="mystory" class="section card-section">
       <div class="container">
         <h1 class="section-heading">My Story</h1>
         <p>
-          From my early days tinkering with code to my immersive experiences at DEPI and various internships, my journey is fueled by passion and continuous learning. I believe every challenge is an opportunity to innovate and every dataset tells a story waiting to be uncovered.
+          From my early days experimenting with code to my immersive experiences at DEPI and internships at renowned organizations, every challenge has fueled my passion for technology and continuous learning. I believe every dataset tells a story and every security breach is a call to innovate.
         </p>
       </div>
     </section>
@@ -382,11 +403,11 @@
       <div class="container">
         <h1 class="section-heading">Key Strengths</h1>
         <ul>
-          <li>Expertise in Cybersecurity: Offensive & defensive strategies, ethical hacking, and network security.</li>
+          <li>Cybersecurity Expertise: Offensive & defensive strategies, ethical hacking, and network security.</li>
           <li>Data Analytics: Proficient in Python, SQL, Power BI, and Tableau for deep data insights.</li>
-          <li>Full-Stack Development: Solid foundation in web technologies and software development.</li>
-          <li>Continuous Learning: Constantly upskilling through certifications and hands-on projects.</li>
-          <li>Community Engagement: Active volunteer and collaborative team member.</li>
+          <li>Full‑Stack Development: Strong foundation in web technologies and software engineering.</li>
+          <li>Continuous Learning: Actively upskilling through certifications and hands‑on projects.</li>
+          <li>Community Engagement: Dedicated volunteer and collaborative team player.</li>
         </ul>
       </div>
     </section>
@@ -471,12 +492,12 @@
         <div class="item">
           <h2>Data Analyst Specialist Trainee</h2>
           <p><strong>Digital Egypt Pioneers Initiative - DEPI</strong> | Sep 2024 - Present · Alexandria, Egypt · Hybrid</p>
-          <p>Analyzing large datasets using Python, SQL, and Tableau. Collaborating with teams to uncover trends and drive data-informed decisions.</p>
+          <p>Analyzing large datasets using Python, SQL, and Tableau. Collaborating with teams to uncover trends and drive data‑informed decisions.</p>
         </div>
         <div class="item">
           <h2>Internship Trainee</h2>
           <p><strong>Information Technology Institute (ITI)</strong> | Sep 2024 - Oct 2024 · Alexandria, Egypt · Remote</p>
-          <p>Completed training in web development fundamentals including Scratch, CSS, HTML, and CS50 while developing interactive projects.</p>
+          <p>Completed training in web development fundamentals (Scratch, CSS, HTML, CS50) while developing interactive projects.</p>
         </div>
         <div class="item">
           <h2>Intern</h2>
@@ -485,8 +506,8 @@
         </div>
         <div class="item">
           <h2>Internship Trainee</h2>
-          <p><strong>ITIDA</strong> | Sep 2024 · Alexandria, Egypt · On-site</p>
-          <p>Developed skills in innovation, entrepreneurship, and creative problem-solving, and completed technology leadership certifications.</p>
+          <p><strong>ITIDA</strong> | Sep 2024 · Alexandria, Egypt · On‑site</p>
+          <p>Developed skills in innovation, entrepreneurship, and creative problem‑solving; completed technology leadership certifications.</p>
         </div>
         <div class="item">
           <h2>Internship Trainee</h2>
@@ -496,7 +517,7 @@
       </div>
     </section>
 
-    <!-- 8. Services (Without Prices) -->
+    <!-- 8. Services -->
     <section id="services" class="section card-section">
       <div class="container">
         <h1 class="section-heading">Services</h1>
@@ -514,12 +535,12 @@
           <div class="service-item">
             <img src="./images/sales.png" alt="Trends Analysis Icon">
             <h3>Trends & Strategy Analysis</h3>
-            <p>In-depth analysis of emerging trends with strategic recommendations tailored to your business.</p>
+            <p>In‑depth analysis of emerging trends with strategic recommendations tailored to your business.</p>
           </div>
           <div class="service-item">
             <img src="./images/work.png" alt="Detailed Reporting Icon">
             <h3>Detailed Explanation & Reporting</h3>
-            <p>Comprehensive documentation and presentation of insights to support informed decision-making.</p>
+            <p>Comprehensive documentation and presentation of insights to support informed decision‑making.</p>
           </div>
           <div class="service-item">
             <img src="./images/python.jpeg" alt="Clustering Analysis Icon">
@@ -529,7 +550,7 @@
           <div class="service-item">
             <img src="./images/data.png" alt="Association Rule Mining Icon">
             <h3>Association Rule Mining & Probability Analysis</h3>
-            <p>Identification of key association rules and probability-based insights for operational optimization.</p>
+            <p>Identification of key association rules and probability‑based insights for operational optimization.</p>
           </div>
           <div class="service-item">
             <img src="./images/malware.jpeg" alt="Advanced Malware Engineering Icon">
@@ -594,7 +615,7 @@
             <h2>Front-End Projects</h2>
             <p><em>Aug 2024</em></p>
             <p>
-              Responsive web applications (Twitter and YouTube clones) with a focus on clean design and user experience.
+              Responsive web applications (Twitter and YouTube clones) with a focus on clean design and optimal user experience.
             </p>
             <a href="https://github.com/AS2812/data_science" target="_blank">View on GitHub</a>
           </div>
@@ -607,44 +628,107 @@
       </div>
     </section>
 
-    <!-- 10. Achievements (Certifications & Volunteer) -->
+    <!-- 10. Achievements (Licenses & Certifications + Volunteer) -->
     <section id="achievements" class="section card-section">
       <div class="container">
         <h1 class="section-heading">Achievements</h1>
-        <div class="certifications-grid" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+        <div class="certifications-grid">
           <!-- Certification 1: Accenture Simulation -->
           <div class="cert-item">
-            <h3>Accenture Data Analytics & Visualization Job Simulation</h3>
+            <h3>Accenture North America - Data Analytics & Visualization Job Simulation</h3>
             <p><strong>Issued:</strong> Feb 2025</p>
             <p><strong>ID:</strong> MrstNHkYTpwGAnEAZ</p>
-            <p>Demonstrated proficiency in data analysis and visualization through a comprehensive job simulation.</p>
+            <p>Forage | Skills: Data Analysis, Data Visualization</p>
+            <p>This PowerPoint presentation showcases the insights derived from data analysis conducted during the simulation. It includes key findings on content trends, strategic recommendations, and visualizations that effectively communicate complex data in a clear, business‑friendly manner.</p>
             <a href="#" target="_blank">Show Credential</a>
           </div>
           <!-- Certification 2: TryHackMe Pre Security -->
           <div class="cert-item">
-            <h3>Certified in Pre Security</h3>
+            <h3>Certified in Pre Security by TryHackMe</h3>
             <p><strong>Issued:</strong> Jan 2025</p>
             <p><strong>ID:</strong> THM-RBYGX8KK2C</p>
-            <p>Completed foundational cybersecurity training focusing on offensive and defensive strategies.</p>
+            <p>Skills: General Cyber, Security Analysis, Penetration Testing/Red Team</p>
+            <p>Successfully completed the Pre Security learning path, gaining foundational skills in cybersecurity, networking, web fundamentals, Linux, and Windows. Demonstrated expertise in offensive and defensive security principles.</p>
             <a href="#" target="_blank">Show Credential</a>
           </div>
           <!-- Certification 3: HackerRank Python -->
           <div class="cert-item">
-            <h3>Python (Basic) Certification</h3>
+            <h3>Certified in Python (Basic) by HackerRank</h3>
             <p><strong>Issued:</strong> Jan 2025</p>
             <p><strong>ID:</strong> 699e0c8edce4</p>
-            <p>Validated core Python skills including data types, control flow, and OOP.</p>
+            <p>Skills: Python (Programming Language)</p>
+            <p>Achieved the Python (Basic) certification showcasing proficiency in core Python concepts including data types, control flow, strings, collections, and OOP.</p>
             <a href="#" target="_blank">Show Credential</a>
           </div>
           <!-- Certification 4: HackerRank SQL -->
           <div class="cert-item">
-            <h3>SQL (Basic) Certification</h3>
+            <h3>Certified in SQL (Basic) by HackerRank</h3>
             <p><strong>Issued:</strong> Jan 2025</p>
             <p><strong>ID:</strong> f1932d139c53</p>
-            <p>Demonstrated proficiency in writing queries and managing relational data.</p>
+            <p>Achieved certification in writing simple queries, managing relationships, and utilizing aggregators—validating foundational SQL skills.</p>
             <a href="#" target="_blank">Show Credential</a>
           </div>
-          <!-- Additional certifications can be added similarly -->
+          <!-- Certification 5: Google Connect and Protect -->
+          <div class="cert-item">
+            <h3>Connect and Protect: Networks & Network Security</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>ID:</strong> GP3LCWLDY17W</p>
+            <p>Certified by Coursera and Google with a 98.81% grade; skills in network architecture, TCP/IP, security hardening, and intrusion prevention.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 6: Google Play It Safe -->
+          <div class="cert-item">
+            <h3>Play It Safe: Manage Security Risks</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>ID:</strong> LHF1CQWEU7Q3</p>
+            <p>Certified by Coursera and Google with a 97.32% grade; expertise in risk management, NIST frameworks, and incident response playbooks.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 7: Google Foundations of Cybersecurity -->
+          <div class="cert-item">
+            <h3>Foundations of Cybersecurity</h3>
+            <p><strong>Issued:</strong> Dec 2024</p>
+            <p><strong>ID:</strong> DNZG7XURSSZB</p>
+            <p>Certified by Coursera and Google with a 98.15% grade; skills in cybersecurity fundamentals, NIST frameworks, and security ethics.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 8: Google Cloud Security -->
+          <div class="cert-item">
+            <h3>Introduction to Security Principles in Cloud Computing</h3>
+            <p><strong>Issued:</strong> Oct 2024</p>
+            <p><strong>ID:</strong> 07FPZNPI8WMH</p>
+            <p>Certified by Coursera and Google Cloud with a perfect 100% grade; mastery of cloud security fundamentals and digital transformation.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 9: SAS Data Literacy Essentials -->
+          <div class="cert-item">
+            <h3>Data Literacy Essentials</h3>
+            <p><strong>Issued:</strong> Aug 2024</p>
+            <p>Developed a strong foundation in data literacy, essential for effective data analysis.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 10: SAS Data Literacy in Practice -->
+          <div class="cert-item">
+            <h3>Data Literacy in Practice</h3>
+            <p><strong>Issued:</strong> Aug 2024</p>
+            <p>Further developed practical data literacy skills through hands‑on applications.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 11: HackerRank Java -->
+          <div class="cert-item">
+            <h3>Certified in Java (Basic) by HackerRank</h3>
+            <p><strong>Issued:</strong> Jul 2024</p>
+            <p><strong>ID:</strong> 16134779d953</p>
+            <p>Validated proficiency in core Java programming concepts, demonstrating the ability to write efficient and effective code.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 12: Safwa FCDS Java Workshop -->
+          <div class="cert-item">
+            <h3>Java Workshop - Safwa FCDS</h3>
+            <p><strong>Issued:</strong> Dec 2023</p>
+            <p>Completed the Java workshop with Safwa FCDS, as a family member of Alexandria University.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
         </div>
         <!-- Volunteer Achievement -->
         <div class="item" style="margin-top:30px;">
@@ -656,17 +740,44 @@
       </div>
     </section>
 
-    <!-- 11. Review (Profile Analytics) -->
+    <!-- 11. Review -->
     <section id="review" class="section card-section">
       <div class="container">
         <h1 class="section-heading">Review</h1>
-        <p style="text-align:center;">Analytics Overview:</p>
-        <ul style="list-style:none; text-align:center; padding:0;">
-          <li>195 Profile Views</li>
-          <li>958 Post Impressions</li>
-          <li>38 Search Appearances</li>
-        </ul>
-        <p style="text-align:center;">Discover who's engaging with your profile.</p>
+        <div style="max-width:800px; margin:0 auto;">
+          <div style="border-bottom:1px solid var(--secondary-color); padding:15px 0;">
+            <p><strong>Mahmoud Aymen (1st Degree Connection)</strong> – Data Analyst | Google Data Analyst Specialist | Passionate about Data‑Driven Insights <em>(2 months ago)</em></p>
+            <p>"Well done Ahmed 🤍🤍"</p>
+          </div>
+          <div style="border-bottom:1px solid var(--secondary-color); padding:15px 0;">
+            <p><strong>Muaz Sulaiman (1st Degree Connection)</strong> – Business Intelligence Analyst | Data Analyst | Data Science Student | Treasurer @IEEE AlexCSC <em>(2 months ago)</em></p>
+            <p>"Great work! ♥️"</p>
+          </div>
+          <div style="border-bottom:1px solid var(--secondary-color); padding:15px 0;">
+            <p><strong>Mohamed Bassat (1st Degree Connection)</strong> – AI Major | Computer Science Student | Competitive Programmer | AI Engineer <em>(2 months ago)</em></p>
+            <p>"Amazing work, as always ❤️❤️❤️"</p>
+          </div>
+          <div style="border-bottom:1px solid var(--secondary-color); padding:15px 0;">
+            <p><strong>Amr Medhat (1st Degree Connection)</strong> – Cloud Engineer | Security | CS Student @FCDS'27 | 2× Azure, AWS, Huawei | ISC2 CC | CyberOps <em>(3 months ago)</em></p>
+            <p>"Great job 🎉✨"</p>
+          </div>
+          <div style="border-bottom:1px solid var(--secondary-color); padding:15px 0;">
+            <p><strong>Omar Mohamed Dief (1st Degree Connection)</strong> – Data Scientist <em>(3 months ago)</em></p>
+            <p>"Excellent work Ahmed ❤️"</p>
+          </div>
+          <div style="border-bottom:1px solid var(--secondary-color); padding:15px 0;">
+            <p><strong>Farah Mohamed Abdel Hafeiz (1st Degree Connection)</strong> – Data Science Intern @Carerha | Ex. Intern @CIB Egypt | Ex. Intern @EPC | Senior Data Science Student @FCDS <em>(3 months ago)</em></p>
+            <p>"Impressive 👏👏"</p>
+          </div>
+          <div style="border-bottom:1px solid var(--secondary-color); padding:15px 0;">
+            <p><strong>Salma Mohamed (1st Degree Connection)</strong> – Business Analytics Student <em>(3 months ago)</em></p>
+            <p>"👏👏👏"</p>
+          </div>
+          <div style="padding:15px 0;">
+            <p><strong>Muslim Galiakot (Following)</strong> – Empowering Business Growth through Custom Technology Solutions <em>(3 months ago)</em></p>
+            <p>"Nice work Ahmed Shacker Helmi. Building a Twitter clone is a great way to practice front‑end skills."</p>
+          </div>
+        </div>
       </div>
     </section>
 
