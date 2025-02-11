@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmed Shacker Helmi - Portfolio</title>
+  <title>Ahmed Shacker Helmi - Data Analytics & Cybersecurity Portfolio</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-  <!-- Slick Carousel CSS (if needed) -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <!-- Custom CSS -->
   <style>
     /* ------------------------- ROOT VARIABLES ------------------------- */
@@ -146,7 +143,6 @@
       font-weight: 600;
       margin-top: 20px;
       display: inline-block;
-      text-decoration: none;
       transition: background-color 0.3s ease;
     }
 
@@ -268,59 +264,36 @@
       color: var(--primary-color);
     }
 
-    /* ------------------------- CONTACT ------------------------- */
-    .contact-info {
-      text-align: center;
-      margin-bottom: 20px;
+    /* ------------------------- CERTIFICATIONS ------------------------- */
+    .certifications-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
-    .contact-info p {
-      margin: 10px 0;
-      font-size: 1.1em;
-    }
-
-    .contact-info a {
-      color: var(--primary-color);
-      font-weight: 600;
-    }
-
-    form.contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    form.contact-form .input-group {
-      margin-bottom: 15px;
-    }
-
-    form.contact-form input,
-    form.contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid var(--secondary-color);
-      border-radius: 4px;
+    .cert-item {
       background-color: var(--card-background);
-      color: var(--text-color);
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 300px;
+      flex: 1 1 300px;
     }
 
-    form.contact-form textarea {
-      resize: vertical;
-      min-height: 150px;
+    .cert-item img {
+      width: 50px;
+      margin-bottom: 10px;
     }
 
-    form.contact-form button {
-      background-color: var(--primary-color);
-      color: var(--background-color);
-      border: none;
-      padding: 12px 25px;
-      font-size: 1em;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    .cert-item h3 {
+      font-size: 1.3em;
+      margin-bottom: 5px;
+      color: var(--primary-color);
     }
 
-    form.contact-form button:hover {
-      background-color: #e07a00;
+    .cert-item p {
+      font-size: 0.9em;
+      margin: 5px 0;
     }
 
     /* ------------------------- FOOTER ------------------------- */
@@ -368,7 +341,7 @@
       .project {
         flex-direction: column;
       }
-      .services-grid {
+      .services-grid, .certifications-grid {
         flex-direction: column;
         align-items: center;
       }
@@ -382,7 +355,6 @@
       <nav>
         <div class="container nav-inner">
           <div class="branding">
-            <!-- Logo -->
             <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="Logo">
             <h2>Ahmed Shacker Helmi</h2>
           </div>
@@ -406,7 +378,7 @@
     <section class="hero" style="padding-top: 100px;">
       <div class="hero-content container">
         <h1>Ahmed Shacker Helmi</h1>
-        <p>Cybersecurity Student at Alexandria University | Data Analyst Specialist Trainee</p>
+        <p>Cybersecurity Student | Data Analytics Specialist Trainee</p>
         <p>Alexandria, Egypt</p>
       </div>
     </section>
@@ -416,7 +388,7 @@
       <div class="container">
         <h1 class="section-heading">About Me</h1>
         <p>
-          I am a passionate Computer Science student specializing in Cybersecurity and Data Analysis. With robust expertise in ethical hacking, network security, and data-driven decision making, I help businesses transform raw data into actionable insights. If you’re looking for a dedicated professional to secure your systems and unlock the potential of your data, let’s connect!
+          I am a dedicated Computer Science student specializing in Cybersecurity and Data Analytics. I transform complex data into actionable insights and secure systems through robust cybersecurity practices. My hands-on experience with DEPI projects, simulation roles (e.g., with Accenture), and academic pursuits has equipped me to drive data-informed decision-making.
         </p>
         <div class="social" style="text-align: center; margin-top: 20px;">
           <a href="https://www.linkedin.com/in/ahmed-shacker-helmi/" target="_blank" title="LinkedIn">
@@ -440,55 +412,68 @@
       <div class="container">
         <h1 class="section-heading">Let's Collaborate</h1>
         <p>
-          Are you ready to harness the power of data analytics to drive your business forward? I specialize in transforming complex datasets into actionable insights that optimize decision-making, boost efficiency, and fuel growth.
+          Ready to leverage data analytics for transformative insights? I offer comprehensive analytics solutions—from data cleaning to interactive dashboards—that empower stakeholders to drive growth.
         </p>
         <p>
-          With proven expertise in advanced analytics, statistical modeling, and interactive dashboards, I offer tailored solutions—from retail analytics to predictive modeling and digital strategy. Let’s partner to turn your data into a strategic asset.
+          With expertise in Power BI, Python, R, and SQL (plus hands-on DEPI and simulation experience), I deliver strategies that turn raw data into actionable business intelligence.
         </p>
         <a class="btn-contact" href="#contact">Get in Touch</a>
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section with Pricing -->
     <section id="services" class="section card-section services">
       <div class="container">
-        <h1 class="section-heading">Services</h1>
+        <h1 class="section-heading">Services & Pricing</h1>
         <div class="services-grid">
-          <!-- 1. Cybersecurity Assessment -->
-          <div class="service-item">
-            <img src="./images/malware.jpeg" alt="Cybersecurity Icon">
-            <h3>Cybersecurity Assessment</h3>
-            <p>Comprehensive security audits, penetration testing, and vulnerability assessments to protect your digital assets.</p>
-          </div>
-          <!-- 2. Data Analysis & Visualization -->
-          <div class="service-item">
-            <img src="./images/data%20science.jpeg" alt="Data Analysis Icon">
-            <h3>Data Analysis & Visualization</h3>
-            <p>Transform raw data into insightful dashboards and interactive visualizations using Python, SQL, and Tableau.</p>
-          </div>
-          <!-- 3. Work & Sales Data Insights -->
-          <div class="service-item">
-            <img src="./images/sales.png" alt="Sales Data Icon">
-            <h3>Work & Sales Data Insights</h3>
-            <p>Leverage data analytics to optimize work processes and boost sales performance for strategic growth.</p>
-          </div>
-          <!-- 4. Data Cleaning, Trends & Dashboard Solutions -->
+          <!-- Service 1: Data Cleaning & Preprocessing -->
           <div class="service-item">
             <img src="./images/data.png" alt="Data Cleaning Icon">
-            <h3>Data Cleaning & Trend Analysis</h3>
-            <p>Implement robust data cleaning and trend analysis to build interactive dashboards that drive decision-making.</p>
+            <h3>Data Cleaning & Preprocessing</h3>
+            <p>Removal of duplicates, handling missing values, outlier detection, and data normalization.</p>
+            <p><strong>Cost:</strong> Starting at $10</p>
           </div>
-          <!-- 5. Advanced Malware Engineering & Simulation -->
+          <!-- Service 2: Data Visualization & Reporting -->
+          <div class="service-item">
+            <img src="./images/data%20science.jpeg" alt="Data Visualization Icon">
+            <h3>Data Visualization & Reporting</h3>
+            <p>Interactive dashboards and comprehensive visual reports that illuminate trends and insights.</p>
+            <p><strong>Cost:</strong> Starting at $20</p>
+          </div>
+          <!-- Service 3: Trends & Strategy Analysis -->
+          <div class="service-item">
+            <img src="./images/sales.png" alt="Strategy Analysis Icon">
+            <h3>Trends & Strategy Analysis</h3>
+            <p>In-depth analysis of emerging trends with actionable strategic recommendations tailored to your business.</p>
+            <p><strong>Cost:</strong> Starting at $30</p>
+          </div>
+          <!-- Service 4: Detailed Explanation & Reporting -->
+          <div class="service-item">
+            <img src="./images/work.png" alt="Detailed Reporting Icon">
+            <h3>Detailed Explanation & Reporting</h3>
+            <p>Comprehensive documentation and presentation of insights ensuring clarity for informed decisions.</p>
+            <p><strong>Cost:</strong> Starting at $25</p>
+          </div>
+          <!-- Service 5: K-Means Clustering Analysis -->
+          <div class="service-item">
+            <img src="./images/python.jpeg" alt="Clustering Analysis Icon">
+            <h3>K-Means Clustering Analysis</h3>
+            <p>Customer segmentation and clustering to identify patterns and drive targeted strategies.</p>
+            <p><strong>Cost:</strong> Starting at $27</p>
+          </div>
+          <!-- Service 6: Association Rule Mining & Probability Analysis -->
+          <div class="service-item">
+            <img src="./images/data.png" alt="Association Rule Mining Icon">
+            <h3>Association Rule Mining & Probability Analysis</h3>
+            <p>Identification of significant association rules and probability-based insights for optimization.</p>
+            <p><strong>Cost:</strong> Starting at $35</p>
+          </div>
+          <!-- Service 7: Advanced Malware Engineering -->
           <div class="service-item">
             <img src="./images/malware.jpeg" alt="Advanced Malware Icon">
             <h3>Advanced Malware Engineering</h3>
-            <p>Simulate and analyze sophisticated malware techniques—including rootkits, keyloggers, logic bombs, and ransomware—for research and training.</p>
-          </div>
-          <!-- 6. Web Development & Digital Strategy -->
-          <div class="service-item">
-            <img src="./images/1.jpg" alt="Web Development Icon">
-            <h3>Web Development & Digital Strategy</h3>
-            <p>Develop secure, responsive web applications paired with digital strategies to enhance your online presence.</p>
+            <p>Simulation and analysis of rootkits, keyloggers, logic bombs, and ransomware for training and research.</p>
+            <p><strong>Cost:</strong> Starting at $40</p>
           </div>
         </div>
       </div>
@@ -530,7 +515,7 @@
     <section id="projects" class="section card-section projects">
       <div class="container">
         <h1 class="section-heading">Projects & Data Analytics Work</h1>
-        <!-- Project 1 -->
+        <!-- Project 1: Retail Analytics -->
         <div class="item project">
           <div class="project-info">
             <h2>Comprehensive Retail Analytics</h2>
@@ -546,13 +531,13 @@
             </a>
           </div>
         </div>
-        <!-- Project 2: Malware Simulation Project -->
+        <!-- Project 2: Malware Simulation -->
         <div class="item project">
           <div class="project-info">
             <h2>Malware Simulation Project</h2>
             <p><em>Oct 2024 - Nov 2024</em></p>
             <p>
-              A project simulating ransomware behavior for educational purposes. Explore the cybersecurity programming and simulation details on LinkedIn.
+              Simulated ransomware behavior for educational purposes. Explore the cybersecurity programming and simulation details on LinkedIn.
             </p>
             <a href="https://www.linkedin.com/posts/ahmed-shacker-helmi_cybersecurity-programming-ransomwaresimulation-activity-7265068897844776961-yDOr" target="_blank">View Project on LinkedIn</a>
           </div>
@@ -562,7 +547,7 @@
             </a>
           </div>
         </div>
-        <!-- Project 3 -->
+        <!-- Project 3: Customer Data Analysis -->
         <div class="item project">
           <div class="project-info">
             <h2>Customer Data Analysis</h2>
@@ -578,13 +563,13 @@
             </a>
           </div>
         </div>
-        <!-- Project 4 -->
+        <!-- Project 4: Front-End Projects -->
         <div class="item project">
           <div class="project-info">
             <h2>Front-End Projects</h2>
             <p><em>Aug 2024</em></p>
             <p>
-              Responsive web applications including Twitter and YouTube clones, focusing on clean design and user experience.
+              Responsive web applications including Twitter and YouTube clones, focusing on clean design and optimal user experience.
             </p>
             <a href="https://github.com/AS2812/data_science" target="_blank">View Project on GitHub</a>
           </div>
@@ -594,86 +579,104 @@
             </a>
           </div>
         </div>
-        <!-- Additional Projects -->
-        <div class="item project">
-          <div class="project-info">
-            <h2>Additional Project Image</h2>
-            <p><em>Example</em></p>
-            <p>Additional screenshot demonstrating project work.</p>
-          </div>
-          <div class="project-image">
-            <img src="./images/Screenshot_1-2-2025_153944_.jpeg" alt="Additional Project Screenshot">
-          </div>
-        </div>
-        <div class="item project">
-          <div class="project-info">
-            <h2>Another Project Detail</h2>
-            <p><em>Example</em></p>
-            <p>More examples of project visuals.</p>
-          </div>
-          <div class="project-image">
-            <img src="./images/Screenshot_1-2-2025_153954_.jpeg" alt="Another Project Screenshot">
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- Licenses & Certifications Section -->
     <section id="certifications" class="section card-section certifications">
       <div class="container">
-        <h1 class="section-heading">Certifications</h1>
-        <div class="item">
-          <h2>Pre Security Certification</h2>
-          <p><strong>TryHackMe · Jan 2025</strong></p>
-          <p>Completed the Pre Security learning path, gaining foundational skills in cybersecurity, networking, and system administration.</p>
-          <p><em>Credential ID: THM-RBYGX8KK2C</em></p>
-        </div>
-        <div class="item">
-          <h2>Python (Basic) Certification</h2>
-          <p><strong>HackerRank · Jan 2025</strong></p>
-          <p>Demonstrated proficiency in core Python concepts including data types, control flow, and OOP.</p>
-          <p><em>Credential ID: 699e0c8edce4</em></p>
-        </div>
-        <div class="item">
-          <h2>SQL (Basic) Certification</h2>
-          <p><strong>HackerRank · Jan 2025</strong></p>
-          <p>Demonstrated proficiency in writing queries and managing relational data.</p>
-          <p><em>Credential ID: f1932d139c53</em></p>
-        </div>
-        <div class="item">
-          <h2>Connect and Protect: Networks and Network Security</h2>
-          <p><strong>Google Career Certificates · Jan 2025</strong></p>
-          <p>Covered network architecture, TCP/IP, and security hardening techniques.</p>
-          <p><em>Credential ID: GP3LCWLDY17W</em></p>
-        </div>
-        <div class="item">
-          <h2>Play It Safe: Manage Security Risks</h2>
-          <p><strong>Google Career Certificates · Jan 2025</strong></p>
-          <p>Mastered risk management, NIST frameworks, and incident response procedures.</p>
-          <p><em>Credential ID: LHF1CQWEU7Q3</em></p>
-        </div>
-        <div class="item">
-          <h2>Foundations of Cybersecurity</h2>
-          <p><strong>Google Career Certificates · Dec 2024</strong></p>
-          <p>Covered cybersecurity fundamentals, NIST frameworks, and essential security tools.</p>
-          <p><em>Credential ID: DNZG7XURSSZB</em></p>
-        </div>
-        <div class="item">
-          <h2>Introduction to Security Principles in Cloud Computing</h2>
-          <p><strong>Google Cloud · Oct 2024</strong></p>
-          <p>Mastered cloud security fundamentals and digital transformation concepts.</p>
-          <p><em>Credential ID: 07FPZNPI8WMH</em></p>
-        </div>
-        <div class="item">
-          <h2>Data Literacy Certifications</h2>
-          <p><strong>SAS · Aug 2024</strong></p>
-          <p>Completed certifications in Data Literacy Essentials and Data Literacy in Practice.</p>
-        </div>
-        <div class="item">
-          <h2>Java (Basic) Certification</h2>
-          <p><strong>HackerRank · Jul 2024</strong></p>
-          <p>Demonstrated proficiency in core Java programming concepts.</p>
-          <p><em>Credential ID: 16134779d953</em></p>
+        <h1 class="section-heading">Licenses & Certifications</h1>
+        <div class="certifications-grid">
+          <!-- Certification 1: Accenture Simulation -->
+          <div class="cert-item">
+            <!-- Replace the placeholder with your actual Forage/Accenture logo URL if available -->
+            <img src="https://via.placeholder.com/50?text=Forage" alt="Forage Logo">
+            <h3>Accenture Data Analytics & Visualization Job Simulation</h3>
+            <p><strong>Issued:</strong> Feb 2025</p>
+            <p><strong>Credential ID:</strong> MrstNHkYTpwGAnEAZ</p>
+            <p>Demonstrated proficiency in data analysis and visualization through a comprehensive job simulation.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 2: TryHackMe Pre Security -->
+          <div class="cert-item">
+            <img src="https://via.placeholder.com/50?text=TryHackMe" alt="TryHackMe Logo">
+            <h3>Certified in Pre Security</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>Credential ID:</strong> THM-RBYGX8KK2C</p>
+            <p>Completed foundational cybersecurity training, focusing on offensive and defensive security principles.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 3: HackerRank Python -->
+          <div class="cert-item">
+            <img src="https://via.placeholder.com/50?text=HackerRank" alt="HackerRank Logo">
+            <h3>Python (Basic) Certification</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>Credential ID:</strong> 699e0c8edce4</p>
+            <p>Validated core Python skills including data types, control flow, and OOP concepts.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 4: HackerRank SQL -->
+          <div class="cert-item">
+            <img src="https://via.placeholder.com/50?text=HackerRank" alt="HackerRank Logo">
+            <h3>SQL (Basic) Certification</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>Credential ID:</strong> f1932d139c53</p>
+            <p>Demonstrated proficiency in writing queries, managing relationships, and utilizing aggregators.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 5: Google Networks -->
+          <div class="cert-item">
+            <img src="https://via.placeholder.com/50?text=Google" alt="Google Career Certificates Logo">
+            <h3>Connect and Protect: Networks & Security</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>Credential ID:</strong> GP3LCWLDY17W</p>
+            <p>Acquired skills in network architecture, TCP/IP, and security hardening techniques.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 6: Google Play It Safe -->
+          <div class="cert-item">
+            <img src="https://via.placeholder.com/50?text=Google" alt="Google Career Certificates Logo">
+            <h3>Play It Safe: Manage Security Risks</h3>
+            <p><strong>Issued:</strong> Jan 2025</p>
+            <p><strong>Credential ID:</strong> LHF1CQWEU7Q3</p>
+            <p>Gained expertise in risk management, NIST frameworks, and incident response strategies.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 7: Google Foundations -->
+          <div class="cert-item">
+            <img src="https://via.placeholder.com/50?text=Google" alt="Google Career Certificates Logo">
+            <h3>Foundations of Cybersecurity</h3>
+            <p><strong>Issued:</strong> Dec 2024</p>
+            <p><strong>Credential ID:</strong> DNZG7XURSSZB</p>
+            <p>Mastered cybersecurity fundamentals, ethical principles, and essential security tools.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 8: Google Cloud Security -->
+          <div class="cert-item">
+            <img src="https://via.placeholder.com/50?text=Google" alt="Google Career Certificates Logo">
+            <h3>Intro to Security Principles in Cloud Computing</h3>
+            <p><strong>Issued:</strong> Oct 2024</p>
+            <p><strong>Credential ID:</strong> 07FPZNPI8WMH</p>
+            <p>Achieved mastery in cloud security fundamentals and digital transformation concepts.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 9: SAS Data Literacy -->
+          <div class="cert-item">
+            <img src="https://via.placeholder.com/50?text=SAS" alt="SAS Logo">
+            <h3>Data Literacy Essentials</h3>
+            <p><strong>Issued:</strong> Aug 2024</p>
+            <p>Developed a strong foundation in data literacy, essential for effective data analysis.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
+          <!-- Certification 10: HackerRank Java -->
+          <div class="cert-item">
+            <img src="https://via.placeholder.com/50?text=HackerRank" alt="HackerRank Logo">
+            <h3>Java (Basic) Certification</h3>
+            <p><strong>Issued:</strong> Jul 2024</p>
+            <p><strong>Credential ID:</strong> 16134779d953</p>
+            <p>Validated proficiency in core Java programming concepts.</p>
+            <a href="#" target="_blank">Show Credential</a>
+          </div>
         </div>
       </div>
     </section>
@@ -741,12 +744,12 @@
       <div class="container">
         <h1 class="section-heading">Education</h1>
         <div class="item" style="overflow: auto;">
-          <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/alexandria_university_logo.jpg" style="width:80px; float:left; margin-right:20px;">
+          <img src="https://github.com/AS2812/Front-end/blob/main/Personal%20Portfolio%20Website/images/Screenshot%202025-02-02%20000443.png?raw=true" alt="Alexandria University Logo" style="width:80px; float:left; margin-right:20px;">
           <h2>Alexandria University</h2>
           <p><strong>Bachelor's degree, Computer Science</strong> | Sep 2023 - Jul 2027</p>
           <p>Grade: CGPA 3.6336</p>
           <p>Activities and societies: Volleyball, Pianist, Choir Member</p>
-          <p>Relevant Skills: Programming, Object-Oriented Programming (OOP) and +10 skills.</p>
+          <p>Relevant Skills: Programming, Object-Oriented Programming (OOP), and more.</p>
         </div>
       </div>
     </section>
@@ -826,20 +829,5 @@
       </div>
     </footer>
   </div>
-
-  <!-- Slick Carousel JS (if needed) -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.slider').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      });
-    });
-  </script>
 </body>
 </html>
